@@ -11,8 +11,11 @@ Repositorio del Proyecto de Laboratorio de Computacion 2
 En este repositorio usted encontrará todo el codigo relacionado
 a la pagina web.
 En la misma usted encontrara:
+1. **index.html** - Pagina principal
 1-Cotizaciones Dolar actualizadas;
+
 2-Cotizaciones de servicions (+fee);
+
 3-Cotizaciones de acciones y bonos del mercado(Merval,Nasdaq,etc);
 
 
