@@ -8,6 +8,12 @@ Repositorio del Proyecto de Laboratorio de Computacion 2
 * Santino **Schiavoni**
 
 ## Contenido/Descripcion
+En este repositorio usted encontrará todo el codigo relacionado
+a la pagina web.
+En la misma usted encontrara:
+1-Cotizaciones Dolar actualizadas;
+2-Cotizaciones de servicions (+fee);
+3-Cotizaciones de acciones y bonos del mercado(Merval,Nasdaq,etc);
 
 
 | 	:mailbox: Email | :man_technologist: Autores |
@@ -19,4 +25,8 @@ Repositorio del Proyecto de Laboratorio de Computacion 2
 
 
 
-Link del Proyecto: 
+Agradecemos a todos los que ayudaron que este proyecto sea posible,
+compañeros,profesores, familia.
+Gracias a todos.
+Si desea colaborar para que podamos continuar,
+dejamos nuestro patreon: https://www.patreon.com/ProyectoLab2
