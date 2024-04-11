@@ -26,6 +26,16 @@ h1{
     color:  #0c6ca5;
     text-align: center;
 }
+
+.navbar li.selected{
+    color:#0c6ca5;
+}
+
+li.selected a{
+    color:#0c6ca5;
+
+}
+
 .navbar ul{
     list-style-type: none;
     background-color: #161616;
@@ -44,7 +54,7 @@ h1{
 }
 
 .navbar a:hover{
-    color: #0c6ca5;
+    color: #104A77;
 }
 
 .navbar li{
