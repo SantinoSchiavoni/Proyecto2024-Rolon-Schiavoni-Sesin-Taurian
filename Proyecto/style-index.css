@@ -1,49 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'poppins';
 }
 body{
     margin: 0;
     padding: 0;
     background-color: #161616;
-    font-family: 'Nunito', sans-serif;
     height: 100vh;
 
 }
 .ppal{
     color: #0c6ca5;
-    font-family: 'Nunito', sans-serif;
 }
 
 .IniciarSesion{
     color: #0c6ca5;
-    font-family: 'Nunito', sans-serif;
 }
 
 .IniciarSesion h1{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 20px;
     font-size: 50px;
-    font-family: 'Nunito', sans-serif;
+
+}
+
+.img-01{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+
 
 }
 
 .acceso{
-    font-family: 'Nunito', sans-serif;
     width: 600px;
     height: 400px;
     background: #161616;
     margin: auto;
-    margin-top: 180px;
+    margin-top: 40px;
     box-shadow: 7px 13px 37px #000;
     padding: 20px 30px;
     border-radius: 13px;
 }
 
 .acceso h2{
-    font-family: 'Nunito', sans-serif;
     margin: 0;
     color: #0c6ca5;
     margin-bottom: 30px;
