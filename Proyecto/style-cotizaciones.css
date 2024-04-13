@@ -107,7 +107,7 @@ li.selected a{
   }
   
   .values {
-    font-size: 18px;
+    font-size: 22px;
     display: flex;
     justify-content: space-around;
   }
