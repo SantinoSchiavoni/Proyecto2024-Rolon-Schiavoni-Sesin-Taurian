@@ -1,7 +1,6 @@
 /* Esta parte en javascript se encarga de manejar la entrada de datos en el form 
 y actualizar dinámicamente a medida que la vamos cargando. Uso jQuery*/
 
-
 /* Crea una variable para almacenar el número de tarjeta.*/ 
 $('.input-numero-tarj').on('keyup change', function(){
 	var elementoActual = $(this);
