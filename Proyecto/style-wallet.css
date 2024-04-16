@@ -16,7 +16,6 @@
 body{
     margin: 0;
     padding: 0;
-    margin-top: 20px;
     background-color: #161616;
     height: 100%;
     width: 100%;
@@ -201,7 +200,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	border-right: 4px solid transparent;
 	position: absolute;
 	z-index: 2;
-	top: 35px;
+	top: 28px;
 	right: 10px;
 	pointer-events: none;
 }
