@@ -87,12 +87,12 @@ li.selected a{
   }
   
   .currency-box {
-    height: 150px;
+    height: 10vm;
     background-color: #222222; /* Fondo negro */
     border: 3px solid #0c6ca5; /* Borde azul claro */
     border-radius: 12px; 
     color: #ffffff; /* Texto blanco */
-    padding: 15px; /*distancia al borde del cuadro */
+    padding: 5px; /*distancia al borde del cuadro */
     margin: 10px; /*distancia entre cuadros*/
     text-align: center;
     width: calc(33.33% - 25px); /* Ancho para 3 cuadros en una fila */
@@ -101,19 +101,19 @@ li.selected a{
   
   .currency-box h2 {
     margin-top: 7px;
-    font-size: 26px;
+    font-size: 2.9vw;
     color: #ffffff; /* Texto blanco */
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   
   .values {
-    font-size: 22px;
+    font-size: 1.7vw;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 15px;
   }
   
   .value-item { /* Fondo gris oscuro */
     padding: 5px;
-    border-radius: 5px;
-  }
+  } 
   
