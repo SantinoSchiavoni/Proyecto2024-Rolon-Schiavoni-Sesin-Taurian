@@ -16,7 +16,6 @@
 body{
     margin: 0;
     padding: 0;
-    margin-top: 20px;
     background-color: #161616;
     height: 100%;
     width: 100%;
@@ -80,7 +79,27 @@ li.selected a{
 .navbar li{
     float: right;
 }
+
+
 /* Estilos para el cuerpo principal de la página */
+#add-card {
+    background-color: #161616; /* Cambia esto al color de fondo que estás usando */
+    border: 2px solid #0c6ca5; /* Cambia esto al color de borde que estás usando */
+    color: #0c6ca5; /* Cambia esto al color de texto que estás usando */
+    padding: 10px 20px; /* Ajusta esto al relleno que estás usando */
+    font-size: 1rem; /* Ajusta esto al tamaño de fuente que estás usando */
+    border-radius: 0.25rem; /* Ajusta esto al radio de borde que estás usando */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Esto añade una transición suave al cambiar los estilos del botón */
+	margin-left: 30px;
+}
+
+#add-card:hover {
+    background-color: #e9ecef; /* Cambia esto al color de fondo que estás usando para el estado hover */
+    border-color: #dae0e5; /* Cambia esto al color de borde que estás usando para el estado hover */
+}
+.add-card .card{
+	display: none; /* Ocultar el cuerpo de la página y la tarjeta de crédito por defecto */
+}
 html,
 .card {
     margin-top: 20px;
@@ -201,7 +220,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	border-right: 4px solid transparent;
 	position: absolute;
 	z-index: 2;
-	top: 35px;
+	top: 25px;
 	right: 10px;
 	pointer-events: none;
 }
@@ -220,6 +239,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	left: 6px;
 	background: none;
 	height: 80%;
+	color: #0c6ca5;
 }
 
 .form button {
