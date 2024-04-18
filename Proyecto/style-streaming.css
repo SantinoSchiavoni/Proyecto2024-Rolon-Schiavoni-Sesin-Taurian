@@ -1,25 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-
-*{
+* {
     margin: 0;
     padding: 0;
+    background-color: #161616;
     box-sizing: border-box;
     font-family: 'poppins';
 }
 
-body{
+body {
     margin: 0;
-    padding: 0;
+    padding: 2;
     margin-top: 20px;
     background-color: #161616;
     height: 100vh;
-
 }
 
-main{
-    margin-left: 20px;
-    margin-right: 20px;
+main {
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 .container {
@@ -36,41 +35,81 @@ main{
 }
 
 .container h1 {
-    color:  #0c6ca5;
+    color: #0c6ca5;
     text-align: center;
 }
 
-
-.navbar li.selected{
-    color:#0c6ca5;
+.navbar li.selected {
+    color: #0c6ca5;
 }
 
-li.selected a{
-    color:#0c6ca5;
-
+li.selected a {
+    color: #0c6ca5;
 }
 
-.navbar ul{
+.navbar ul {
     list-style-type: none;
     background-color: #161616;
-    padding:0px;
+    padding: 0px;
     margin: 0px;
     overflow: hidden;
-
 }
 
-.navbar a{
-    color: #FFFFFF;
+.navbar a {
+    color: #ffffff;
     text-decoration: none;
-    padding:15px;
+    padding: 15px;
     display: block;
     text-align: center;
 }
 
-.navbar a:hover{
-    color: #104A77;
+.navbar a:hover {
+    color: #104a77;
 }
 
-.navbar li{
+.navbar li {
     float: right;
+}
+#acomodar {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan en múltiples líneas si no caben en una sola fila.*/
+    justify-content: center; 
+
+}
+body {
+    background-image: url('/Users/agussesin/Downloads/IMG_8485.jpg');
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #0c6ca5;
+    text-align: center;
+}
+
+.plan {
+        border: 3.5px solid #0c6ca5;
+        padding: 20px;
+        margin-bottom: 30px;
+        display: inline-block; /* Cambiando display a inline-block */
+}
+
+.plan img {
+    max-width: 150px;;
+    /* Ajusta el tamaño máximo del logo */
+}
+
+.logo_color {
+    filter: invert(29%) sepia(82%) saturate(1073%) hue-rotate(173deg) brightness(95%) contrast(92%);
+}
+
+
+.plan {
+    border: 3.5px solid #0c6ca5;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: inline-block; /* Cambiando display a inline-block */
+    width: 250px; /* Tamaño fijo para las cajas de plan */
+    height: 400px; /* Altura fija para las cajas de plan */
+}
+
+.plan img {
+    width: 100px; /* Tamaño fijo para los logos de los servicios de streaming */
+    height: auto; /* Altura automática para mantener la proporción */
 }
