@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var cardDiv = document.querySelector('.card');
 
     // Carga los datos de la tarjeta del almacenamiento local si existen
+<<<<<<< HEAD
     var cardData = localStorage.getItem('cardData');
+=======
+    var cardData = sessionStorage.getItem('cardData');
+>>>>>>> dev-santino
     if (cardData) {
         cardDiv.innerHTML = cardData;
     }
