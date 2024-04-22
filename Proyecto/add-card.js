@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Selecciona la div de la tarjeta
     var cardDiv = document.querySelector('.card');
 
-    // Carga los datos de la tarjeta del almacenamiento local si existen
+    // Carga los datos de la tarjeta del almacenamiento de la sesion si existen
     var cardData = sessionStorage.getItem('cardData');
     if (cardData) {
         cardDiv.innerHTML = cardData;
@@ -35,3 +35,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         addButton.style.display = '';
     });
 });
+
+document.querySelector('.btn-add').addEventListener('click', function(e) {
+    // Previene el comportamiento predeterminado del formulario
+    e.preventDefault();
+    
+        // Almacena los datos de la tarjeta en sessionStorage
+        var num_tarj = document.getElementById('num_tarj-1');
+        var num_tarj_1 = document.getElementById('num_tarj-2');
+        var num_tarj_2 = document.getElementById('num_tarj-3');
+        var num_tarj_3 = document.getElementById('num_tarj-4');
+    
+        console.log(num_tarj, num_tarj_1, num_tarj_2, num_tarj_3, titular_tarj, card_expiration_month, card_expiration_year, card_cvv); // Para depurar
+    
+        sessionStorage.setItem('num_tarj-1', document.getElementById('num_tarj-1').value);
+        sessionStorage.setItem('num_tarj-2', document.getElementById('num_tarj-2').value);
+        sessionStorage.setItem('num_tarj-3', document.getElementById('num_tarj-3').value);
+        sessionStorage.setItem('num_tarj-4', document.getElementById('num_tarj-4').value);
+    });
