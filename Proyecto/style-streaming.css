@@ -33,7 +33,11 @@ main{
     left: 10px;
     width: 50px;
     height: 50px;
+<<<<<<< HEAD
     filter: invert(24%) sepia(100%) saturate(1612%) hue-rotate(182deg) brightness(92%) contrast(91%);
+=======
+    filter: invert(24%) sepia(100%) saturate(1612%) hue-rotate(182deg) brightness(92%) contrast(91%);
+>>>>>>> d489f346aa0f4d190bf25d762c750f3273cbac67
 }
 
 .container h1 {
