@@ -10,7 +10,7 @@
     <body>
         <div class = "container">
             <h1>Wallet</h1>
-        <img src="mini-logo.jpg" class="img-01" alt="Logo de UCC Capital">
+        <img src="Imagenes/logo-menor.png" class="img-01" alt="Logo de UCC Capital">
         </div>
         <nav class="navbar">
             <ul>
@@ -22,7 +22,7 @@
           </nav>
         <div class = "add-card">
           <script src="add-card.js"></script>
-            <button class="btn" id="add-card">Agregar Tarjeta</button>
+            <button class="btn-add" id="add-card">Agregar Tarjeta</button>
             <div class = "card">
               <div class="credit-card-box">
                   <div class="flip">
@@ -45,7 +45,7 @@
                     <div class="back">
                       <div class="strip"></div>
                       <div class="logo">
-                        <img class="logo-uccfinance" src="logo-sinfondo.png"></img>
+                        <img class="Imagenes/logo-uccfinance" src="logo-sinfondo.png"></img>
                       </div>
                       <div class="cvv">
                         <label>CVV</label>
@@ -58,19 +58,19 @@
                 <form class="form" autocomplete="off" novalidate>
                   <fieldset>
                     <label for="num-tarj">Numero de Tarjeta</label>
-                    <input type="num" id="num_tarj" class="input-numero-tarj" maxlength="4" />
-                    <input type="num" id="num_tarj-1" class="input-numero-tarj" maxlength="4" />
-                    <input type="num" id="num_tarj-2" class="input-numero-tarj" maxlength="4" />
-                    <input type="num" id="num_tarj-3" class="input-numero-tarj" maxlength="4" />
+                    <input type="num" id="num_tarj-1" class="input-numero-tarj" maxlength="4" required />
+                    <input type="num" id="num_tarj-2" class="input-numero-tarj" maxlength="4" required/>
+                    <input type="num" id="num_tarj-3" class="input-numero-tarj" maxlength="4" required/>
+                    <input type="num" id="num_tarj-4" class="input-numero-tarj" maxlength="4" required/>
                   </fieldset>
                   <fieldset>
                     <label for="titular-tarj">Nombre del Titular</label>
-                    <input type="text" id="titular-tarj" />
+                    <input type="text" id="titular-tarj" required/>
                   </fieldset>
                   <fieldset class="fieldset-expiration">
                     <label for="card-expiration-month">Fecha de Expiracion</label>
                     <div class="select">
-                      <select id="card-expiration-month">
+                      <select id="card-expiration-month" required>
                         <option></option>
                         <option>01</option>
                         <option>02</option>
@@ -87,7 +87,7 @@
                       </select>
                     </div>
                     <div class="select">
-                      <select id="card-expiration-year">
+                      <select id="card-expiration-year" required>
                         <option></option>
                         <option>2024</option>
                         <option>2025</option>
@@ -104,7 +104,7 @@
                   </fieldset>
                   <fieldset class="fieldset-cvv">
                     <label for="card-cvv">CVV</label>
-                    <input type="text" id="card-cvv" maxlength="3" />
+                    <input type="text" id="card-cvv" maxlength="3" required/>
                   </fieldset>
                   <button class="btn"><i class="fa fa-lock"></i>Agregar</button>
                 </form>
