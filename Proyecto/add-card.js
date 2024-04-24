@@ -11,13 +11,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 <<<<<<< HEAD
     // Carga los datos de la tarjeta del almacenamiento local si existen
 <<<<<<< HEAD
+<<<<<<< HEAD
     var cardData = localStorage.getItem('cardData');
 =======
 =======
     // Carga los datos de la tarjeta del almacenamiento de la sesion si existen
 >>>>>>> dev-santino
+=======
+>>>>>>> 8404314f4d86146cf13b9b325e41935c7f8a54c8
     var cardData = sessionStorage.getItem('cardData');
->>>>>>> dev-santino
     if (cardData) {
         cardDiv.innerHTML = cardData;
     }
