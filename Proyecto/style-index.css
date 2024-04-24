@@ -37,6 +37,7 @@ body{
     display: block;
     margin-top: 10px;
     margin-bottom: 30px;
+    filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
 
 
 }
