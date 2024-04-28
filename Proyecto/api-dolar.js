@@ -13,6 +13,7 @@ fetch(url)
     let tarjeta = dato [6];
     
     function createCurrencyDiv(currencyName, currencyData) { /*funcion para mostrar cada dato*/
+      let box = document.createElement('box');
       let div = document.createElement('div');
       div.className = 'currency-box';/*Clase caja*/
       div.innerHTML = ` 

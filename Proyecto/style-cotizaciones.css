@@ -84,13 +84,23 @@ li.selected a{
     float: right;
 }
 
+.boxBack1{
+    position: absolute;
+    background-color: #FFFFFF;
+    margin-left: 1vw;
+    margin-top: 8vh;
+    width: 31.8vw;
+    height: 29vh;
+    z-index: -1;
+
+}
 
 #dolar {
+    position: relative;
     display: flex;
     flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan en múltiples líneas si no caben en una sola fila.*/
     justify-content: center; /*Centra horizontalmente los elementos hijos dentro del contenedor flex.*/
   }
-  
   .currency-box {
     height: 10vm;
     background-color: rgba(16, 16, 16, 0.8);
@@ -103,6 +113,7 @@ li.selected a{
     width: calc(33.33% - 25px); /* Ancho para 3 cuadros en una fila */
     box-sizing: border-box; /* Incluye el padding en el ancho */
     box-shadow: 16px 16px 8px  #0000008c;
+    z-index: 2;
   }
   
   .currency-box h2 {
@@ -119,7 +130,8 @@ li.selected a{
     margin-bottom: 15px;
   }
   
-  .value-item { /* Fondo gris oscuro */
+  .value-item { 
     padding: 5px;
   } 
+  
   
