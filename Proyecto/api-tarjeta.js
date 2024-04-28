@@ -1,6 +1,22 @@
 /* Esta parte en javascript se encarga de manejar la entrada de datos en el form 
 y actualizar dinámicamente a medida que la vamos cargando. Uso jQuery*/
 
+function addData(){
+	var num_tarj = document.getElementById('num-tarj').value;
+	var titular_tarj = document;
+	var expiracion = document.getElementById('expiracion').value;
+	var cvv = document.getElementById('cvv').value;
+	var titular_tarj = document.getElementById('titular-tarj').value;
+	var tipo_tarj = document.getElementById('tipo-tarj').value;
+	var data = {
+		"num_tarj": num_tarj,
+		"titular_tarj": titular_tarj,
+	}
+	//Agregar datos en sessionStorage
+	sessionStorage.setItem('data', JSON.stringify(data));
+	
+}
+
 /* Crea una variable para almacenar el número de tarjeta.*/ 
 $('.input-numero-tarj').on('keyup change', function(){
 	var elementoActual = $(this);

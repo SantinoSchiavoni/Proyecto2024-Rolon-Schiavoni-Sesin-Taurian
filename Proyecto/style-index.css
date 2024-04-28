@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'poppins';
 }
+
 body{
     margin: 0;
     padding: 0;
@@ -17,6 +18,18 @@ body{
 
 .ppal{
     color: #0c6ca5;
+}
+
+#myCanvas {
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    z-index: -1; /* Esto asegura que el canvas esté detrás de otros contenidos */
+}
+
+.acceso {
+    z-index: 1; /* Esto asegura que el div acceso esté delante del canvas */
 }
 
 .IniciarSesion{

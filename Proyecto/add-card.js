@@ -8,22 +8,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Selecciona la div de la tarjeta
     var cardDiv = document.querySelector('.card');
 
-<<<<<<< HEAD
-    // Carga los datos de la tarjeta del almacenamiento local si existen
-<<<<<<< HEAD
-<<<<<<< HEAD
-    var cardData = localStorage.getItem('cardData');
-=======
-=======
-    // Carga los datos de la tarjeta del almacenamiento de la sesion si existen
->>>>>>> dev-santino
-=======
->>>>>>> 8404314f4d86146cf13b9b325e41935c7f8a54c8
-    var cardData = sessionStorage.getItem('cardData');
-    if (cardData) {
-        cardDiv.innerHTML = cardData;
-    }
-
     // Agrega un evento de clic al botón para agregar tarjeta
     addButton.addEventListener('click', function() {
         // Cambia el estilo de la div de la tarjeta para que sea visible
@@ -31,18 +15,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // Hace que el botón para agregar tarjeta desaparezca
         addButton.style.display = 'none';
-    });
-
-    // Agrega un evento de clic al botón de bloqueo
-    lockButton.addEventListener('click', function() {
-        // Guarda los datos de la tarjeta en el almacenamiento local
-        localStorage.setItem('cardData', cardDiv.innerHTML);
-
-        // Cambia el estilo de la div de la tarjeta para que desaparezca
-        cardDiv.style.display = 'none';
-
-        // Hace que el botón para agregar tarjeta aparezca
-        addButton.style.display = '';
     });
 });
 
