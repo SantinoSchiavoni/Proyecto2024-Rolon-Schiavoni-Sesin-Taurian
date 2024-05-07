@@ -36,12 +36,11 @@ h1{
 .img-01{
     filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
 }
-
 .container .img-01 {
     position: absolute;
-    left: 10px;
-    width: 50px;
-    height: 50px;
+    left: 1vw;
+    width: 8vw;
+    height: 8vh;
     filter: invert(24%) sepia(100%) saturate(1612%) hue-rotate(182deg) brightness(92%) contrast(91%);
 }
 
@@ -65,7 +64,7 @@ li.selected a{
     padding:0px;
     margin: 0px;
     overflow: hidden;
-
+    font-size: 1.5vmax;
 }
 
 .navbar a{

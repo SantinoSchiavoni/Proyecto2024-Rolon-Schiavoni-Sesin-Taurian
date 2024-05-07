@@ -34,14 +34,16 @@ main{
 
 .container .img-01 {
     position: absolute;
-    left: 10px;
-    width: 50px;
-    height: 50px;
+    left: 1vw;
+    width: 5vw;
+    height: 8vh;
 }
 
 .container h1 {
     color:  #0c6ca5;
     text-align: center;
+    font-size: 3vmax;
+    
 }
 
 
@@ -59,7 +61,7 @@ li.selected a{
     padding:0px;
     margin: 0px;
     overflow: hidden;
-
+    font-size: 1.5vmax;
 
 }
 
@@ -102,8 +104,8 @@ ul {
 }
 
 .tarjeta {
-    height: 250px;
-    width: 45vw;
+    height: 40vh;
+    width: 47vw;
     background-color: rgba(16, 16, 16, 0.8); /* Fondo semi-transparente */
     border-radius: 10px;
     box-shadow: 16px 14px 20px #0000008c;
@@ -112,125 +114,52 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 10px; /* Espacio entre las tarjetas */
-    margin-bottom: 10px; /* Espaciado entre las tarjetas */
+    margin-right: 1vw; /* Espacio entre las tarjetas */
+    margin-bottom: .1vh; /* Espaciado entre las tarjetas */
     z-index: 1; 
     text-align: center;
-    margin-top: -20px;
-    /*agrego aca la caja para la animacion */
-    
+    margin-top: -2vh; 
+    border: 3px solid #0c6ca5;        
 } 
 
 .tarjeta:last-child {
     margin-bottom: 0;
 }
 
-.tarjeta img {
-    position: absolute;
-    top: 10px; /* Ajusta la distancia desde arriba según sea necesario */
-    left: 10px; 
-    width: 80px; /* Tamaño fijo para los logos */
-    height: auto; /* Altura automática para mantener la proporción */
-    margin-bottom: 10px; /* Espacio inferior para separar el logo del texto */
-}
-
-.cover {
-    position: absolute; /* Posición absoluta para que la capa se superponga a la tarjeta */
-    top: 0;
-    left: 0;
-    height: 100%; /* Tamaño igual al de la tarjeta */
-    width: 100%; /* Tamaño igual al de la tarjeta */
-    background-color: #FFFFFF; /* Color de fondo para cubrir la animación */
-    border-radius: 10%; /* Borde redondeado igual al de la tarjeta */
-    z-index: 2; /* Asegura que la capa esté por encima de la animación */
-}
-.cover {
-    position: absolute; /* Posición absoluta para que la capa se superponga a la tarjeta */
-    top: 0;
-    left: 0;
-    height: 100%; /* Tamaño igual al de la tarjeta */
-    width: 100%; /* Tamaño igual al de la tarjeta */
-    background-color: #501d23; /* Color de fondo para cubrir la animación */
-    border-radius: 10%; /* Borde redondeado igual al de la tarjeta */
-    z-index: 2; /* Asegura que la capa esté por encima de la animación */
-}
 
 /* Ajustar el tamaño del texto */
-.tarjeta h3,
-.tarjeta p {
-    margin-left: 70px; /* Ajusta el margen según sea necesario */
-    font-size: 10px; /* Puedes ajustar este valor según sea necesario */
+.tarjeta h3,.tarjeta p {
+    margin-left: 6.5vw; /* Ajusta el margen según sea necesario */
+    font-size: .9vi; /* Puedes ajustar este valor según sea necesario */
     padding: 8px; /* Espacio interno del texto */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     border-radius: 5px; /* Bordes redondeados */
     color: white; /* Color del texto */
     position: relative; /* Para ajustar el z-index */
     z-index: 2; /* Colocar el texto por encima del fondo */
-}
-
-
-/* Aumentar el espacio interno */
-.tarjeta h3,
-.tarjeta p {
-    padding: 4; /* Añade espacio alrededor del texto */
-}
-
-/* Agregar un fondo semitransparente */
-.tarjeta h3,
-.tarjeta p { /*tarjetas que dicen el titulo del plan*/
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
     border-radius: 5px; /* Añade bordes redondeados */
     color: white; /* Texto en color blanco para mayor contraste */
-    
+    padding: 4; /* Añade espacio alrededor del texto */
+    width: 12vmax;
+    height: 2.5vmax;
 }
 
+
 .tarjeta ul {
-    margin-top: 10px; /* Ajusta el margen según sea necesario */
-    margin-left: 70px; /* Ajusta el margen según sea necesario */
+    margin-top: 10vh; /* Ajusta el margen según sea necesario */
+    margin-left: 70vw; /* Ajusta el margen según sea necesario */
 }
-.boton-seleccionar {
-    position: absolute;
-    bottom: 10px; /* Ajusta la distancia desde abajo según sea necesario */
-    left: 50%; /* Centra el botón horizontalmente */
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    padding: 10px 20px;
+.tarjeta button {
+    left: 10%; /* Centra el botón horizontalmente */
     background-color: #0c6ca5;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 1vh;
+    width: 10vmax;
+    margin-bottom: 1vh;
+    font-size: 2vh;
 }
-.tarjeta::before {
-    content: "";
-    position: absolute;
-    height: 700px;
-    width: 700px;
-    background-image: conic-gradient(#0c14a5, transparent 120deg);
-    animation: rotar 3s linear infinite;
-    z-index: 1; /*aniamciones por encima del contenido*/
-}
-
-
-@keyframes rotar {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
-    }
-}
-
-.tarjeta::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #101010;
-    border-radius: 10px;
-    box-shadow: inset 16px 14px 20px #0000008c;
-    z-index: -1; /*asegura q este detras del contenido*/
-}
-
 
 .container .img-01 {
     filter: brightness(0) saturate(100%);
@@ -244,44 +173,33 @@ ul {
 
 .tarjeta img {
     position: absolute;
-    top: 10px; /* Ajusta la distancia desde arriba según sea necesario */
-    left: 10px; /* Ajusta la distancia desde la izquierda según sea necesario */
-    width: 50px; /* Ajusta el tamaño según sea necesario */
+    top: 2vh; /* Ajusta la distancia desde arriba según sea necesario */
+    left: 1.5vw; /* Ajusta la distancia desde la izquierda según sea necesario */
+    width: 4vw; /* Ajusta el tamaño según sea necesario */
     height: auto;
 }
 
 .tarjeta h3 { /*tarjeta de los TITULOS*/
     position: absolute;
-    margin-left: 100px; /* Ajusta la distancia desde la izquierda según sea necesario */
-    left: -10px; /* Ajusta la distancia desde la izquierda según sea necesario */
-    top: 70px; /* Ajusta la distancia desde arriba según sea necesario */
-    width: calc(100% - 160px); /* Ajusta el ancho según sea necesario */
-    font-size: 16px;
-    margin-top: -50px;
+    margin-left: 3vw; /* Ajusta la distancia desde la izquierda según sea necesario */
+    width: 20vw;
+    height:7vh ;
+    font-size: 1.5vi;
+    margin-top: -30vh;
+    margin-bottom: 0vh;
 }
 
 .tarjeta ul { /*la tarjeta con las OPCIONES de cada plan*/
-    margin-top: 60px; /* Ajusta la distancia desde arriba según sea necesario */
-    margin-left: -5px;
-    padding-left: 20px; /* Ajusta el padding izquierdo según sea necesario */
+    margin-top:8vh; /* Ajusta la distancia desde arriba según sea necesario */
+    margin-left: 2vw;
     background-color: #00000000; /* Color de fondo deseado para la lista */
-    padding: 20px; /* Espacio interno para separar el contenido del borde */
     border-radius: 5px; /* Bordes redondeados para la lista */
     color: #fff; /* Cambia el color de la fuente */
-    width: calc(50% - 20px); /* Ajusta el ancho según sea necesario */
+    width: 25vw;
+    font-size: 2.7vh;
 }
 
-.tarjeta h3, .tarjeta .planes {
-    right: 50%px;
-}
 
-.caja-encima {
-    position: absolute; /* Coloca la caja encima de las tarjetas */
-    top: 0;
-    left: 0;
-    width: 100%; /* O el ancho deseado */
-    height: 100px; /* O la altura deseada */
-    background-color: rgba(255, 0, 0, 0.5); /* Color de fondo semitransparente */
-    z-index: 2; /* Asegura que la caja esté por encima del contenido de las tarjetas */
-}
+
+
 
