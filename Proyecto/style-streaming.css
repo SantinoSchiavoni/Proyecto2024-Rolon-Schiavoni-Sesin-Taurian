@@ -148,7 +148,7 @@ ul {
     margin-top: 10vh; /* Ajusta el margen según sea necesario */
     margin-left: 70vw; /* Ajusta el margen según sea necesario */
 }
-.tarjeta button {
+.tarjeta input{
     left: 10%; /* Centra el botón horizontalmente */
     background-color: #0c6ca5;
     color: white;
@@ -160,6 +160,7 @@ ul {
     margin-bottom: 1vh;
     font-size: 2vh;
 }
+
 
 .container .img-01 {
     filter: brightness(0) saturate(100%);
