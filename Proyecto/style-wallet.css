@@ -472,7 +472,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 /*En nuestro codigo CSS, @media se utiliza para definir estilos específicos según las características de la pantalla del dispositivo donde se está visualizando la página.*/
 
-
 @media only screen and (max-width: 1400px) and (min-width: 770px) {
 	.checkout {
 		width: 65%;
@@ -493,7 +492,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	}
 
 	.credit-card-box {
-		width: 97%;
+		width: 60vw;
 		transform: unset;
 		margin: 0 auto;
 	}
@@ -509,6 +508,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 	.form fieldset input.input-numero-tarj,
 	.form fieldset .select.input-numero-tarj {
-		width: 65px;
+		width: 2vw;
 	}
 }

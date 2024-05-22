@@ -23,15 +23,15 @@ document.querySelector('.btn-add').addEventListener('click', function (e) {
     e.preventDefault();
 
     // Almacena los datos de la tarjeta en sessionStorage
-    var num_tarj = document.getElementById('num_tarj-1');
-    var num_tarj_1 = document.getElementById('num_tarj-2');
-    var num_tarj_2 = document.getElementById('num_tarj-3');
-    var num_tarj_3 = document.getElementById('num_tarj-4');
+    var num_tarj = document.getElementById('num-tarj-1');
+    var num_tarj_1 = document.getElementById('num-tarj-2');
+    var num_tarj_2 = document.getElementById('num-tarj-3');
+    var num_tarj_3 = document.getElementById('num-tarj-4');
 
     console.log(num_tarj, num_tarj_1, num_tarj_2, num_tarj_3, titular_tarj, card_expiration_month, card_expiration_year, card_cvv); // Para depurar
 
-    sessionStorage.setItem('num_tarj-1', document.getElementById('num_tarj-1').value);
-    sessionStorage.setItem('num_tarj-2', document.getElementById('num_tarj-2').value);
-    sessionStorage.setItem('num_tarj-3', document.getElementById('num_tarj-3').value);
-    sessionStorage.setItem('num_tarj-4', document.getElementById('num_tarj-4').value);
+    sessionStorage.setItem('num-tarj-1', document.getElementById('num-tarj-1').value);
+    sessionStorage.setItem('num-tarj-2', document.getElementById('num-tarj-2').value);
+    sessionStorage.setItem('num-tarj-3', document.getElementById('num-tarj-3').value);
+    sessionStorage.setItem('num-tarj-4', document.getElementById('num-tarj-4').value);
 });

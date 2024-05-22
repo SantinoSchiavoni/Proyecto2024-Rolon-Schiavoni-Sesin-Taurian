@@ -9,8 +9,8 @@ function addData() {
 	var titular_tarj = document.getElementById('titular-tarj').value;
 	var tipo_tarj = document.getElementById('tipo-tarj').value;
 	var data = {
-		"num_tarj": num_tarj,
-		"titular_tarj": titular_tarj,
+		"num-tarj": num_tarj,
+		"titular-tarj": titular_tarj,
 	}
 	//Agregar datos en sessionStorage
 	sessionStorage.setItem('data', JSON.stringify(data));
