@@ -3,146 +3,171 @@
 /* Estilos generales para pseudo-elementos antes y después de todos los elementos */
 *::before,
 *::after {
-    box-sizing: border-box; /* Incluye el borde en el tamaño total del elemento */
+	box-sizing: border-box;
+	/* Incluye el borde en el tamaño total del elemento */
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins';
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins';
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #161616;
-    height: 100%;
-    width: 100%;
-
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #161616;
+	height: 100%;
+	width: 100%;
 }
 
-main{
-    padding-left: 100%;
-    padding-right: 100%;
-    padding-top: 100px;
-    padding-bottom: 100px;
+main {
+	padding-left: 100%;
+	padding-right: 100%;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    position: relative;
+	display: flex;
+	justify-content: center;
+	position: relative;
 }
 
-.img-01{
-    filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
+.img-01 {
+	filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
 }
+
 .container .img-01 {
-    position: absolute;
-    left: 10px;
-    width: 50px;
-    height: 50px;
-	filter: invert(24%) sepia(100%) saturate(1612%) hue-rotate(182deg) brightness(92%) contrast(91%);
+	position: absolute;
+	left: 10px;
+	width: 50px;
+	height: 50px;
+	filter: invert(24%) sepia(100%) saturate(1612%) hue-rotate(182deg) brightness(92%) contrast(91%);
 }
 
 .container h1 {
-    color:  #0c6ca5;
-    text-align: center;
+	color: #0c6ca5;
+	text-align: center;
 }
 
-.navbar li.selected{
-    color:#0c6ca5;
+.navbar li.selected {
+	color: #0c6ca5;
 }
 
-li.selected a{
-    color:#0c6ca5;
-
-}
-.navbar ul{
-    list-style-type: none;
-    background-color: #161616;
-    padding:0px;
-    margin: 0px;
-    overflow: hidden;
-
+li.selected a {
+	color: #0c6ca5;
 }
 
-.navbar a{
-    color: #FFFFFF;
-    text-decoration: none;
-    padding:15px;
-    display: block;
-    text-align: center;
+.navbar ul {
+	list-style-type: none;
+	background-color: #161616;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
 }
 
-.navbar a:hover{
-    color: #104A77;
+.navbar a {
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	text-align: center;
 }
 
-.navbar li{
-    float: right;
+.navbar a:hover {
+	color: #104A77;
+}
+
+.navbar li {
+	float: right;
 }
 
 
 /* Estilos para el cuerpo principal de la página */
 #add-card {
-    background-color: #161616; /* Cambia esto al color de fondo que estás usando */
-    border: 2px solid #0c6ca5; /* Cambia esto al color de borde que estás usando */
-    color: #0c6ca5; /* Cambia esto al color de texto que estás usando */
-    padding: 10px 20px; /* Ajusta esto al relleno que estás usando */
-    font-size: 1rem; /* Ajusta esto al tamaño de fuente que estás usando */
-    border-radius: 0.25rem; /* Ajusta esto al radio de borde que estás usando */
-    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Esto añade una transición suave al cambiar los estilos del botón */
+	background-color: #161616;
+	/* Cambia esto al color de fondo que estás usando */
+	border: 2px solid #0c6ca5;
+	/* Cambia esto al color de borde que estás usando */
+	color: #0c6ca5;
+	/* Cambia esto al color de texto que estás usando */
+	padding: 10px 20px;
+	/* Ajusta esto al relleno que estás usando */
+	font-size: 1rem;
+	/* Ajusta esto al tamaño de fuente que estás usando */
+	border-radius: 0.25rem;
+	/* Ajusta esto al radio de borde que estás usando */
+	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	/* Esto añade una transición suave al cambiar los estilos del botón */
 	margin-left: 30px;
 }
 
 #add-card:hover {
-    background-color: #e9ecef; /* Cambia esto al color de fondo que estás usando para el estado hover */
-    border-color: #dae0e5; /* Cambia esto al color de borde que estás usando para el estado hover */
+	background-color: #e9ecef;
+	/* Cambia esto al color de fondo que estás usando para el estado hover */
+	border-color: #dae0e5;
+	/* Cambia esto al color de borde que estás usando para el estado hover */
 }
-.add-card .card{
-	display: none; /* Ocultar el cuerpo de la página y la tarjeta de crédito por defecto */
+
+.add-card .card {
+	display: none;
+	/* Ocultar el cuerpo de la página y la tarjeta de crédito por defecto */
 }
+
 html,
 .card {
-    margin-top: 20px;
-    font-family:'Poppins'; /* Fuente principal */
-    display: flex; /* Uso de Flexbox para centrar verticalmente el contenido */
-    justify-content: center;
-    align-items: center;
+	margin-top: 20px;
+	font-family: 'Poppins';
+	/* Fuente principal */
+	display: flex;
+	/* Uso de Flexbox para centrar verticalmente el contenido */
+	justify-content: center;
+	align-items: center;
 }
 
 /* Estilos para botones */
 .btn {
-    display: block;
-    color: white; /* Color del texto */
-    text-decoration: none; /* Sin subrayado en los enlaces */
-    margin: 20px 0; /* Margen superior e inferior de 20px, sin margen lateral */
-    padding: 15px 15px; /* Padding interno del botón */
-    border-radius: 5px; /* Borde redondeado */
-    position: relative; /* Posición relativa para elementos posicionados dentro */
-	font-weight: bold; /* Letra en negrita */
+	display: block;
+	color: white;
+	/* Color del texto */
+	text-decoration: none;
+	/* Sin subrayado en los enlaces */
+	margin: 20px 0;
+	/* Margen superior e inferior de 20px, sin margen lateral */
+	padding: 15px 15px;
+	/* Padding interno del botón */
+	border-radius: 5px;
+	/* Borde redondeado */
+	position: relative;
+	/* Posición relativa para elementos posicionados dentro */
+	font-weight: bold;
+	/* Letra en negrita */
 }
 
 /* Estilos para el efecto hover en los botones */
 .btn::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: all 0.2s ease-in-out; /* Transición suave de 0.2 segundos */
-    box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0), 0 3px 3px rgba(0, 0, 0, 0.2); /* Sombra del botón */
-    border-radius: 5px;
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: all 0.2s ease-in-out;
+	/* Transición suave de 0.2 segundos */
+	box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0), 0 3px 3px rgba(0, 0, 0, 0.2);
+	/* Sombra del botón */
+	border-radius: 5px;
 }
 
 /* Estilos para el efecto hover activado en los botones */
 .btn:hover::after {
-    background: rgba(0, 0, 0, 0.1); /* Fondo semi-transparente en hover */
-    box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.2); /* Sombra en hover */
+	background: rgba(0, 0, 0, 0.1);
+	/* Fondo semi-transparente en hover */
+	box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.2);
+	/* Sombra en hover */
 }
 
 .form fieldset {
@@ -152,15 +177,18 @@ html,
 	position: relative;
 	clear: both;
 }
+
 .form fieldset.fieldset-expiration {
 	float: left;
 	width: 60%;
 }
+
 .form fieldset.fieldset-expiration .select {
 	width: 70px;
 	margin-right: 12px;
 	float: left;
 }
+
 .form fieldset.fieldset-cvv {
 	clear: none;
 	float: right;
@@ -176,6 +204,7 @@ html,
 	margin-bottom: 5px;
 	font-weight: bold;
 }
+
 /* configuro como va a ser (color, negrita, etc) la letra CON LA QUE COMPLETO mi form (el que está a la derecha) */
 .form fieldset input,
 .form fieldset .select {
@@ -258,11 +287,10 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	margin-top: 90px;
 	cursor: pointer;
 }
+
 .form button .fa {
 	margin-right: 6px;
 }
-
-
 
 .credit-card-box {
 	perspective: 1000;
@@ -270,9 +298,12 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	height: 280px;
 	transform: translateX(-40%);
 }
-.credit-card-box:hover .flip, .credit-card-box.hover .flip {
+
+.credit-card-box:hover .flip,
+.credit-card-box.hover .flip {
 	transform: rotateY(180deg);
 }
+
 .credit-card-box .front,
 .credit-card-box .back {
 	width: 400px;
@@ -280,7 +311,8 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	border-radius: 15px;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
-	background-image: url('https://media.istockphoto.com/id/897189176/photo/defocused-background.webp?b=1&s=170667a&w=0&k=20&c=JqCY-fHDh0qVVQfG3N6a6jmuYegiXi-grDuR4z_ihGk='); /* Imagen de fondo */
+	background-image: url('https://media.istockphoto.com/id/897189176/photo/defocused-background.webp?b=1&s=170667a&w=0&k=20&c=JqCY-fHDh0qVVQfG3N6a6jmuYegiXi-grDuR4z_ihGk=');
+	/* Imagen de fondo */
 	position: absolute;
 	color: #fff;
 	top: 0;
@@ -308,6 +340,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	z-index: 2;
 	transform: rotateY(0deg);
 }
+
 .credit-card-box .back {
 	transform: rotateY(180deg);
 }
@@ -315,7 +348,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 /*Ubicación de nuestro logo personal*/
 /*mientras mas grande top: x px, estará mas abajo*/
 .credit-card-box .back .logo {
-
 	top: 185px;
 }
 
@@ -363,6 +395,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	top: 30px;
 	left: 0;
 }
+
 .credit-card-box .number {
 	position: absolute;
 	margin: 0 auto;
@@ -370,6 +403,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	left: 19px;
 	font-size: 36px;
 }
+
 .credit-card-box label {
 	font-size: 10px;
 	letter-spacing: 1px;
@@ -379,6 +413,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	display: block;
 	margin-bottom: 3px;
 }
+
 .credit-card-box .titular-tarj,
 .credit-card-box .card-expiration-date {
 	position: absolute;
@@ -388,11 +423,13 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	font-size: 22px;
 	text-transform: capitalize;
 }
+
 .credit-card-box .card-expiration-date {
 	text-align: right;
 	left: auto;
 	right: 20px;
 }
+
 .credit-card-box .cvv {
 	height: 36px;
 	background: #fff;
@@ -407,6 +444,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	text-align: right;
 	padding: 10px;
 }
+
 .credit-card-box .cvv label {
 	margin: -25px 0 8px;
 	color: #fff;
@@ -414,52 +452,63 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 .logo-visa {
 	background-image: url('https://cdn.icon-icons.com/icons2/3261/PNG/512/visa_logo_icon_206647.png');
-	background-size: contain; /* Ajusta el tamaño de la imagen */
-	background-repeat: no-repeat; /* Evita la repetición de la imagen */
+	background-size: contain;
+	/* Ajusta el tamaño de la imagen */
+	background-repeat: no-repeat;
+	/* Evita la repetición de la imagen */
 	width: 120px;
 	height: 70px;
-  }
+}
 
 .logo-uccfinance {
-	background-size: contain; /* Ajusta el tamaño de la imagen */
-	background-repeat: no-repeat; /* Evita la repetición de la imagen */
+	background-size: contain;
+	/* Ajusta el tamaño de la imagen */
+	background-repeat: no-repeat;
+	/* Evita la repetición de la imagen */
 	width: 60px;
 	height: 60px;
 }
-  
+
 
 /*En nuestro codigo CSS, @media se utiliza para definir estilos específicos según las características de la pantalla del dispositivo donde se está visualizando la página.*/
 
 
-@media only screen and (max-width: 1400px) and (min-width: 770px)  {
+@media only screen and (max-width: 1400px) and (min-width: 770px) {
 	.checkout {
 		width: 65%;
 	}
 }
 
 @media (max-width: 769px) {
-	html, body {
+
+	html,
+	body {
 		height: auto;
 	}
+
 	.checkout {
 		display: block;
 		width: 95%;
 		padding: 20px 15px 20px;
 	}
+
 	.credit-card-box {
 		width: 97%;
 		transform: unset;
 		margin: 0 auto;
 	}
-	.credit-card-box .front, .credit-card-box .back {
+
+	.credit-card-box .front,
+	.credit-card-box .back {
 		width: 100%;
 	}
 
 	.credit-card-box .number {
 		font-size: 30px;
 	}
-	.form fieldset input.input-numero-tarj, .form fieldset .select.input-numero-tarj {
+
+	.form fieldset input.input-numero-tarj,
+	.form fieldset .select.input-numero-tarj {
 		width: 65px;
 	}
 }
-

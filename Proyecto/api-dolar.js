@@ -1,4 +1,4 @@
-let url = 'https://dolarapi.com/v1/dolares'; /*Obtencion de api*/ 
+let url = 'https://dolarapi.com/v1/dolares'; /*Obtencion de api*/
 let mostrarcotizacion = document.getElementById('dolar');
 
 fetch(url)
@@ -6,12 +6,12 @@ fetch(url)
   .then((dato) => {
     console.log(dato); /*Funcion para obtener los datos del array de la api*/
     let oficial = dato[0];
-    let blue = dato [1];
-    let bolsa = dato [2];
-    let contadoConLiqui = dato [3];
-    let mayorista = dato [4];
-    let tarjeta = dato [6];
-    
+    let blue = dato[1];
+    let bolsa = dato[2];
+    let contadoConLiqui = dato[3];
+    let mayorista = dato[4];
+    let tarjeta = dato[6];
+
     function createCurrencyDiv(currencyName, currencyData) { /*funcion para mostrar cada dato*/
       let div = document.createElement('div');
       div.className = 'currency-box';/*Clase caja*/
@@ -38,4 +38,4 @@ fetch(url)
     createCurrencyDiv('Mayorista', mayorista);
     createCurrencyDiv('Tarjeta', tarjeta);
 
-    });
+  });

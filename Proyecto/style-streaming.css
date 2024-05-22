@@ -2,23 +2,30 @@
 /*pagina extra cxon confirmacion de compra*/
 /*animacion.. hacer caja nueva y trasladar el texto */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'poppins';
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     margin-top: 20px;
     background-color: #161616;
+<<<<<<< HEAD
     height: 100vh; /*para que ocope tod la altura del navegador*/
 
 }
 
 main{ /*margenes lat para el contenedor principal*/
+=======
+    height: 100vh;
+}
+
+main {
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -29,52 +36,57 @@ main{ /*margenes lat para el contenedor principal*/
     position: relative;
 }
 
-.img-01{
+.img-01 {
     filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
 }
 
 .container .img-01 {
     position: absolute;
-    left: 10px;
-    width: 50px;
-    height: 50px;
+    left: 1vw;
+    width: 5vw;
+    height: 8vh;
 }
 
 .container h1 {
-    color:  #0c6ca5;
+    color: #0c6ca5;
     text-align: center;
+    font-size: 3vmax;
 }
 
 
-.navbar li.selected{
-    color:#0c6ca5;
+.navbar li.selected {
+    color: #0c6ca5;
 }
 
-li.selected a{
-    color:#0c6ca5;
+li.selected a {
+    color: #0c6ca5;
 }
 
-.navbar ul{
+.navbar ul {
     list-style-type: none;
     background-color: #161616;
-    padding:0px;
+    padding: 0px;
     margin: 0px;
     overflow: hidden;
+<<<<<<< HEAD
+=======
+    font-size: 1.5vmax;
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
 }
 
-.navbar a{
+.navbar a {
     color: #FFFFFF;
     text-decoration: none;
-    padding:15px;
+    padding: 15px;
     display: block;
     text-align: center;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     color: #104A77;
 }
 
-.navbar li{
+.navbar li {
     float: right;
 }
 
@@ -93,18 +105,34 @@ ul {
 .contenedor { 
     height: 100vh;
     width: 100vw;
+<<<<<<< HEAD
     display: flex; /*centrar horizontal*/
     flex-wrap: wrap; /* Para que las cajas se ajusten automáticamente */
     align-items: flex-start; /* Para alinear las cajas al inicio del contenedor */
+=======
+    display: flex;
+    flex-wrap: wrap;
+    /* Para que las cajas se ajusten automáticamente */
+    align-items: flex-start;
+    /* Para alinear las cajas al inicio del contenedor */
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
     justify-content: center;
     position: relative;
 }
 
+<<<<<<< HEAD
 
 .tarjeta { /*tiene animacion*/
     height: 250px;
     width: 35vw;
     background-color: rgba(16, 16, 16, 0.8); /* Fondo semi-transparente */
+=======
+.tarjeta {
+    height: 40vh;
+    width: 47vw;
+    background-color: rgba(16, 16, 16, 0.8);
+    /* Fondo semi-transparente */
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
     border-radius: 10px;
     box-shadow: 16px 14px 20px #0000008c;
     position: relative;
@@ -112,6 +140,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     margin-right: 10px; /* Espacio entre las tarjetas */
     margin-bottom: 10px; /* Espaciado entre las tarjetas */
     z-index: 0; /*coloca tarjetas atras del contenido*/
@@ -123,62 +152,59 @@ ul {
 .contenido {
   position: relative;
   z-index: 2; /* Z-index para el contenido de la tarjeta */
+=======
+    margin-right: 1vw;
+    /* Espacio entre las tarjetas */
+    margin-bottom: .1vh;
+    /* Espaciado entre las tarjetas */
+    z-index: 1;
+    text-align: center;
+    margin-top: -2vh;
+    border: 3px solid #0c6ca5;
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
 }
 
 .tarjeta:last-child {
     margin-bottom: 0;
 }
 
-.tarjeta img {
-    position: absolute;
-    top: 10px; /* Ajusta la distancia desde arriba según sea necesario */
-    left: 10px; 
-    width: 80px; /* Tamaño fijo para los logos */
-    height: auto; /* Altura automática para mantener la proporción */
-    margin-bottom: 10px; /* Espacio inferior para separar el logo del texto */
-}
-
-.cover {
-    position: absolute; /* Posición absoluta para que la capa se superponga a la tarjeta */
-    top: 0;
-    left: 0;
-    height: 100%; /* Tamaño igual al de la tarjeta */
-    width: 100%; /* Tamaño igual al de la tarjeta */
-    background-color: #FFFFFF; /* Color de fondo para cubrir la animación */
-    border-radius: 10%; /* Borde redondeado igual al de la tarjeta */
-    z-index: 2; /* Asegura que la capa esté por encima de la animación */
-}
-.cover {
-    position: absolute; /* Posición absoluta para que la capa se superponga a la tarjeta */
-    top: 0;
-    left: 0;
-    height: 100%; /* Tamaño igual al de la tarjeta */
-    width: 100%; /* Tamaño igual al de la tarjeta */
-    background-color: #501d23; /* Color de fondo para cubrir la animación */
-    border-radius: 10%; /* Borde redondeado igual al de la tarjeta */
-    z-index: 2; /* Asegura que la capa esté por encima de la animación */
-}
 
 /* Ajustar el tamaño del texto */
 .tarjeta h3,
 .tarjeta p {
-    margin-left: 70px; /* Ajusta el margen según sea necesario */
-    font-size: 10px; /* Puedes ajustar este valor según sea necesario */
-    padding: 8px; /* Espacio interno del texto */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    border-radius: 5px; /* Bordes redondeados */
-    color: white; /* Color del texto */
-    position: relative; /* Para ajustar el z-index */
-    z-index: 2; /* Colocar el texto por encima del fondo */
+    margin-left: 6.5vw;
+    /* Ajusta el margen según sea necesario */
+    font-size: .9vi;
+    /* Puedes ajustar este valor según sea necesario */
+    padding: 8px;
+    /* Espacio interno del texto */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    color: white;
+    /* Color del texto */
+    position: relative;
+    /* Para ajustar el z-index */
+    z-index: 2;
+    /* Colocar el texto por encima del fondo */
+    border-radius: 5px;
+    /* Añade bordes redondeados */
+    color: white;
+    /* Texto en color blanco para mayor contraste */
+    padding: 4;
+    /* Añade espacio alrededor del texto */
+    width: 12vmax;
+    height: 2.5vmax;
 }
 
 
-/* Aumentar el espacio interno */
-.tarjeta h3,
-.tarjeta p {
-    padding: 4; /* Añade espacio alrededor del texto */
+.tarjeta ul {
+    margin-top: 10vh;
+    /* Ajusta el margen según sea necesario */
+    margin-left: 70vw;
+    /* Ajusta el margen según sea necesario */
 }
 
+<<<<<<< HEAD
 /* Agregar un fondo semitransparente */
 .tarjeta h3,
 .tarjeta p { /*tarjetas que dicen el titulo del plan*/
@@ -200,11 +226,22 @@ ul {
     left: 50%; /* Centra el botón horizontalmente */
     transform: translateX(-50%); /* Centra el botón horizontalmente */
     padding: 10px 20px;
+=======
+.tarjeta ul li {
+    margin-bottom: 1vh;
+    /* Ajusta el margen según sea necesario */
+}
+
+.tarjeta input {
+    left: 10%;
+    /* Centra el botón horizontalmente */
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
     background-color: #0c6ca5;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+<<<<<<< HEAD
     z-index: 2;
 }
 .tarjeta::before {
@@ -235,55 +272,108 @@ ul {
     border-radius: 10px;
     box-shadow: inset 16px 14px 20px #0000008c;
     z-index: -1; /*asegura q esse detras del contenido*/
+=======
+    margin-top: 2vh;
+    width: 10vmax;
+    margin-bottom: 1vh;
+    font-size: 2vh;
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
 }
 
 .container .img-01 {
     filter: brightness(0) saturate(100%);
     filter: invert(29%) sepia(82%) saturate(1073%) hue-rotate(173deg) brightness(95%) contrast(92%);
+<<<<<<< HEAD
 } 
+=======
+}
+
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
 .tarjeta {
     position: relative;
 }
 
 .tarjeta img {
     position: absolute;
-    top: 10px; /* Ajusta la distancia desde arriba según sea necesario */
-    left: 10px; /* Ajusta la distancia desde la izquierda según sea necesario */
-    width: 50px; /* Ajusta el tamaño según sea necesario */
+    top: 2vh;
+    /* Ajusta la distancia desde arriba según sea necesario */
+    left: 1.5vw;
+    /* Ajusta la distancia desde la izquierda según sea necesario */
+    width: 4vw;
+    /* Ajusta el tamaño según sea necesario */
     height: auto;
 }
 
-.tarjeta h3 { /*tarjeta de los TITULOS*/
+.tarjeta h3 {
+    /*tarjeta de los TITULOS*/
     position: absolute;
-    margin-left: 100px; /* Ajusta la distancia desde la izquierda según sea necesario */
-    left: -10px; /* Ajusta la distancia desde la izquierda según sea necesario */
-    top: 70px; /* Ajusta la distancia desde arriba según sea necesario */
-    width: calc(100% - 160px); /* Ajusta el ancho según sea necesario */
-    font-size: 16px;
-    margin-top: -50px;
+    margin-left: 3vw;
+    /* Ajusta la distancia desde la izquierda según sea necesario */
+    width: 20vw;
+    height: 7vh;
+    font-size: 1.5vi;
+    margin-top: -30vh;
+    margin-bottom: 0vh;
 }
 
-.tarjeta ul { /*la tarjeta con las OPCIONES de cada plan*/
-    margin-top: 60px; /* Ajusta la distancia desde arriba según sea necesario */
-    margin-left: -5px;
-    padding-left: 20px; /* Ajusta el padding izquierdo según sea necesario */
-    background-color: #00000000; /* Color de fondo deseado para la lista */
-    padding: 20px; /* Espacio interno para separar el contenido del borde */
-    border-radius: 5px; /* Bordes redondeados para la lista */
-    color: #fff; /* Cambia el color de la fuente */
-    width: calc(50% - 20px); /* Ajusta el ancho según sea necesario */
+.tarjeta ul {
+    /*la tarjeta con las OPCIONES de cada plan*/
+    margin-top: 4vh;
+    /* Ajusta la distancia desde arriba según sea necesario */
+    margin-left: 2vw;
+    background-color: #00000000;
+    /* Color de fondo deseado para la lista */
+    border-radius: 5px;
+    /* Bordes redondeados para la lista */
+    color: #fff;
+    /* Cambia el color de la fuente */
+    width: 25vw;
+    font-size: 2.7vh;
 }
 
-.tarjeta h3, .tarjeta .planes {
-    right: 50%px;
+
+.precio p {
+    position: absolute;
+    width: 20vw;
+    height: 10.5vh;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    transform: translateX(100%);
+    /* Apply animation to this element */
+    animation: marquee 6s linear infinite;
 }
 
-.caja-encima {
-    position: absolute; /* Coloca la caja encima de las tarjetas */
-    top: 0;
-    left: 0;
-    width: 100%; /* O el ancho deseado */
-    height: 100px; /* O la altura deseada */
-    background-color: rgba(255, 0, 0, 0.5); /* Color de fondo semitransparente */
-    z-index: 2; /* Asegura que la caja esté por encima del contenido de las tarjetas */
+/* Move it (define the animation) */
+@keyframes marquee {
+    0% {
+        transform: translateX(-77%);
+    }
+
+    100% {
+        transform: translateX(77%);
+    }
 }
+<<<<<<< HEAD
+=======
+
+.tarjeta-precio {
+    margin-left: 5.5vh;
+    height: 3.5vh;
+    width: 20vw;
+    background-color: rgba(16, 16, 16, 0.8);
+    /* Fondo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 6px 4px 10px #0000008c;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-align: center;
+    margin-top: 0vh;
+    border: 1px solid #00000000;
+}
+>>>>>>> 6e49bdd8ddf4f6539dee1536a688f142772b5821
