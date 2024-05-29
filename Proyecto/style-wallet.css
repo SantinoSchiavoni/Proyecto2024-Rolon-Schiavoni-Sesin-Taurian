@@ -200,7 +200,7 @@ html,
 .form fieldset label {
 	display: block;
 	text-transform: uppercase;
-	font-size: 11px;
+	font-size: 15px;
 	color: #FFFFFF;
 	margin-bottom: 5px;
 	font-weight: bold;
@@ -214,7 +214,7 @@ html,
 	color: #0c6ca5;
 	padding: 10px;
 	border-radius: 0;
-	font-size: 15px;
+	font-size: 12px;
 	outline: none !important;
 	border: none;
 	border-bottom: 1px solid #d1d1d1;
@@ -402,7 +402,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	margin: 0 auto;
 	top: 103px;
 	left: 19px;
-	font-size: 36px;
+	font-size: 30px;
 }
 
 .credit-card-box label {
@@ -473,7 +473,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 /*En nuestro codigo CSS, @media se utiliza para definir estilos específicos según las características de la pantalla del dispositivo donde se está visualizando la página.*/
 
-
 @media only screen and (max-width: 1400px) and (min-width: 770px) {
 	.checkout {
 		width: 65%;
@@ -494,7 +493,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	}
 
 	.credit-card-box {
-		width: 97%;
+		width: 60vw;
 		transform: unset;
 		margin: 0 auto;
 	}
@@ -510,6 +509,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 	.form fieldset input.input-numero-tarj,
 	.form fieldset .select.input-numero-tarj {
-		width: 65px;
+		width: 2vw;
 	}
 }
