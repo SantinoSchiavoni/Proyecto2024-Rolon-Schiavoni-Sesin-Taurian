@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', (event) => {
     // Selecciona el botón para agregar tarjeta
     var addButton = document.getElementById('add-card');
@@ -95,3 +96,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.error('El formulario con id "formulario" no se encontró en el DOM.');
     }
 });
+=======
+>>>>>>> 5555e78b385bab98abeb157e3f6617799b0c9479
