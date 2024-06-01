@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      <form class="form" autocomplete="off" novalidate>
+      <form id= "formulario" class="form" autocomplete="off" novalidate>
         <fieldset>
           <label for="num-tarj">Numero de Tarjeta</label>
           <input type="num" id="num-tarj-1" class="input-numero-tarj" maxlength="4" required />
@@ -112,6 +112,15 @@
         <button class="btn"><i class="fa fa-lock"></i>Agregar</button>
       </form>
     </div>
+    <script>
+      // Agrega un evento de clic al botón "Agregar" para redirigir a la página de wallet
+      document.addEventListener('DOMContentLoaded', function() {
+        const agregarButton = document.querySelector('.btn');
+        agregarButton.addEventListener('click', function() {
+          window.location.href = 'wallet.html'; // Cambia 'wallet.html' por la ruta correcta si es diferente
+        });
+      });
+    </script>
     <script src="api-tarjeta.js"></script>
   </div>
   </div>
