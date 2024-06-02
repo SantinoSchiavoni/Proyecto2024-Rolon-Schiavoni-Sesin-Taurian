@@ -14,6 +14,8 @@
 	font-family: 'poppins';
 }
 
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -22,6 +24,11 @@ body {
 	width: 100%;
 }
 
+.wrapper-grid {
+	display:grid;
+	grid-template-columns: repeat(auto-fit, 40rem); 
+
+}
 main {
 	padding-left: 100%;
 	padding-right: 100%;
@@ -117,6 +124,9 @@ li.selected a {
 }
 
 html,
+
+
+
 .card {
 	margin-top: 20px;
 	font-family: 'Poppins';
@@ -472,42 +482,11 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 /*En nuestro codigo CSS, @media se utiliza para definir estilos específicos según las características de la pantalla del dispositivo donde se está visualizando la página.*/
 
-@media only screen and (max-width: 1400px) and (min-width: 770px) {
-	.checkout {
-		width: 65%;
-	}
-}
 
-@media (max-width: 769px) {
-
-	html,
-	body {
-		height: auto;
-	}
-
-	.checkout {
-		display: block;
-		width: 95%;
-		padding: 20px 15px 20px;
-	}
-
-	.credit-card-box {
-		width: 60vw;
-		transform: unset;
-		margin: 0 auto;
-	}
-
-	.credit-card-box .front,
-	.credit-card-box .back {
-		width: 100%;
-	}
-
-	.credit-card-box .number {
-		font-size: 30px;
-	}
-
-	.form fieldset input.input-numero-tarj,
-	.form fieldset .select.input-numero-tarj {
-		width: 2vw;
-	}
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .card,
+  .form {
+    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+  }
 }
