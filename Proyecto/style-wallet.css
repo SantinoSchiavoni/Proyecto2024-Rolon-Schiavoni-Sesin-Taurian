@@ -15,7 +15,6 @@
 }
 
 
-
 body {
 	margin: 0;
 	padding: 0;
@@ -490,3 +489,4 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
     width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
   }
 }
+
