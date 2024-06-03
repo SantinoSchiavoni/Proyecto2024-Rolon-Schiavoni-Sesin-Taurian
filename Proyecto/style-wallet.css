@@ -186,6 +186,7 @@ html,
 	padding: 10px 0;
 	position: relative;
 	clear: both;
+	margin-top: 7vh;
 }
 
 .form fieldset.fieldset-expiration {
@@ -307,6 +308,8 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	width: 370px;
 	height: 280px;
 	transform: translateX(-40%);
+	margin-right: -30vw;
+	margin-top: 10vh;
 }
 
 .credit-card-box:hover .flip,
@@ -484,10 +487,27 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 
 /* Media query para pantallas pequeñas */
-@media screen and (max-width: 600px) {
-  .card,
-  .form {
-    width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+@media (max-width: 600px) {
+	.container{
+		width: 120vw;
+	}
+  .card{
+	width: 20px;
   }
+  .card .credit-card-box{
+	margin-left: 80px;
+  }
+  .form {
+    width: 100vw; /* Ocupa todo el ancho en pantallas pequeñas */
+	margin-left: 50px;
+  }
+  .navbar{
+	width: 120vw;
+	list-style-type: none;
+	background-color: #161616;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+}
 }
 
