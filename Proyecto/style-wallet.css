@@ -97,17 +97,18 @@ li.selected a {
 	/* Cambia esto al color de fondo que estás usando */
 	border: 2px solid #0c6ca5;
 	/* Cambia esto al color de borde que estás usando */
-	color: #0c6ca5;
+	color: white;
 	/* Cambia esto al color de texto que estás usando */
-	padding: 10px 20px;
+	padding: 7vh 7vw;
 	/* Ajusta esto al relleno que estás usando */
-	font-size: 1rem;
+	font-size: 2vmax;
 	/* Ajusta esto al tamaño de fuente que estás usando */
 	border-radius: 0.25rem;
 	/* Ajusta esto al radio de borde que estás usando */
 	transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 	/* Esto añade una transición suave al cambiar los estilos del botón */
-	margin-left: 30px;
+	margin-top: 20vh; 
+	margin-left: 35vw;
 }
 
 #add-card:hover {
