@@ -7,8 +7,8 @@ Repositorio del Proyecto de Laboratorio de Computacion 2
 * Francisco **Taurian**
 * Santino **Schiavoni**
 
-##Github Pages
-franciscotaurian.github.io 
+## Github Pages
+https:://franciscotaurian.github.io 
 
 ## Contenido/Descripcion
 En este repositorio usted encontrará todo el codigo relacionado
