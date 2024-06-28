@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-@media (min-width: 600px) { 
+@media (min-width: 600px) {  /* Estilos para pantallas mayores a 600px en modo horizontal */
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +28,7 @@ main {
 }
 
 .img-01 {
-    filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
+    filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%); /* Filtro para cambiar el color de la imagen */
 }
 
 .container .img-01 {
@@ -45,11 +45,11 @@ main {
 }
 
 
-.navbar li.selected {
+.navbar li.selected { /* Selecciono el elemento li que tenga la clase selected */
     color: #0c6ca5;
 }
 
-li.selected a {
+li.selected a { /* Selecciono el elemento a que este dentro de un elemento li con la clase selected */
     color: #0c6ca5;
 }
 
@@ -62,7 +62,7 @@ li.selected a {
     font-size: 1.5vmax;
 }
 
-.navbar a {
+.navbar a { /* Estilos para los enlaces de la barra de navegación */
     color: #FFFFFF;
     text-decoration: none;
     padding: 15px;
@@ -70,7 +70,7 @@ li.selected a {
     text-align: center;
 }
 
-.navbar a:hover {
+.navbar a:hover { /* Estilos para los enlaces de la barra de navegación al pasar el mouse por encima */
     color: #104A77;
 }
 
@@ -82,22 +82,19 @@ ul {
     list-style: none;
 }
 
-#acomodar {
+#acomodar { /* Acomodo de las tarjetas */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 /* Integración de las reglas del segundo CSS */
-
 .contenedor {
     height: 100vh;
     width: 100vw;
     display: flex;
-    flex-wrap: wrap;
-    /* Para que las cajas se ajusten automáticamente */
-    align-items: flex-start;
-    /* Para alinear las cajas al inicio del contenedor */
+    flex-wrap: wrap; /* Para que las cajas se ajusten automáticamente */
+    align-items: flex-start; /* Para alinear las cajas al inicio del contenedor */
     justify-content: center;
     position: relative;
 }
@@ -106,8 +103,7 @@ ul {
     position: relative;
     height: 37vh;
     width: 35vw;
-    background-color: rgba(16, 16, 16, 0.8);
-    /* Fondo semi-transparente */
+    background-color: rgba(16, 16, 16, 0.8); /* Fondo semi-transparente */
     border-radius: 10px;
     box-shadow: 16px 14px 20px #0000008c;
     overflow: hidden;
@@ -115,16 +111,14 @@ ul {
     align-items: center;
     justify-content: center;
     margin-right: 1vw;
-    /* Espacio entre las tarjetas */
     margin-bottom: .1vh;
-    /* Espaciado entre las tarjetas */
     z-index: 1;
     text-align: center;
     margin-top: -2vh;
     border: 3px solid #0c6ca5;
 }
 
-.tarjeta:last-child {
+.tarjeta:last-child { /* Estilos para la última tarjeta */
     margin-bottom: 0;
 }
 
@@ -133,25 +127,15 @@ ul {
 .tarjeta h3,
 .tarjeta p {
     margin-left: 6.5vw;
-    /* Ajusta el margen según sea necesario */
-    font-size: .9vi;
-    /* Puedes ajustar este valor según sea necesario */
-    padding: 8px;
-    /* Espacio interno del texto */
-    border-radius: 5px;
-    /* Bordes redondeados */
-    color: white;
-    /* Color del texto */
-    position: relative;
-    /* Para ajustar el z-index */
-    z-index: 2;
-    /* Colocar el texto por encima del fondo */
-    border-radius: 5px;
-    /* Añade bordes redondeados */
-    color: white;
-    /* Texto en color blanco para mayor contraste */
-    padding: 4;
-    /* Añade espacio alrededor del texto */
+    font-size: .9vi; /*La unidad vi se refiere a "1% de la altura del viewport" */
+    padding: 8px; /* Espacio interno del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    color: white; /* Color del texto */
+    position: relative; /* Para ajustar el z-index */
+    z-index: 2; /* Colocar el texto por encima del fondo */
+    border-radius: 5px; /* Añade bordes redondeados */
+    color: white; /* Texto en color blanco para mayor contraste */
+    padding: 4; /* Añade espacio alrededor del texto */
     width: 12vmax;
     height: 2.5vmax;
 }
@@ -170,8 +154,7 @@ ul {
 }
 
 .tarjeta input {
-    left: 10%;
-    /* Centra el botón horizontalmente */
+    left: 10%; /* Centra el botón horizontalmente */
     background-color: #0c6ca5;
     color: white;
     border: none;
@@ -184,7 +167,7 @@ ul {
 }
 
 
-.container .img-01 {
+.container .img-01 { /* Estilos para la imagen */
     filter: brightness(0) saturate(100%);
     filter: invert(29%) sepia(82%) saturate(1073%) hue-rotate(173deg) brightness(95%) contrast(92%);
 }
@@ -235,14 +218,14 @@ ul {
     margin: 0;
     line-height: 50px;
     text-align: center;
-    /* Starting position */
-    transform: translateX(100%);
-    /* Apply animation to this element */
+    /* Posicion inicial */
+    transform: translateX(100%); 
+    /* Aplicar Animacion Marquesina*/
     animation: marquee 6s linear infinite;
 }
 
-/* Move it (define the animation) */
-@keyframes marquee {
+/* Mover la animacion definida como marquee */
+@keyframes marquee { /* Keyframe es una regla que se utiliza para especificar los cambios de estilo en una animación */
     0% {
         transform: translateX(-77%);
     }
@@ -257,7 +240,6 @@ ul {
     height: 3.5vh;
     width: 20vw;
     background-color: rgba(16, 16, 16, 0.8);
-    /* Fondo semi-transparente */
     border-radius: 10px;
     box-shadow: 6px 4px 10px #0000008c;
     position: relative;
@@ -270,12 +252,12 @@ ul {
     margin-top: 0vh;
     border: 1px solid #00000000;
 }
-.planes {
+.planes { /* Estilos para los planes */
     font-size: 1vmax;
 }
 }
 
-@media (max-width: 600px) { 
+@media (max-width: 600px) {  /* Estilos para pantallas menores a 600px */
 
 * {
     margin: 0;
@@ -304,7 +286,7 @@ main {
 }
 
 .img-01 {
-    filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%);
+    filter: invert(31%) sepia(62%) saturate(1308%) hue-rotate(172deg) brightness(92%) contrast(93%); /* Filtro para cambiar el color de la imagen */
 }
 
 .container .img-01 {
@@ -321,11 +303,11 @@ main {
 }
 
 
-.navbar li.selected {
+.navbar li.selected { /* Selecciono el elemento li que tenga la clase selected */
     color: #0c6ca5;
 }
 
-li.selected a {
+li.selected a { /* Selecciono el elemento a que este dentro de un elemento li con la clase selected */
     color: #0c6ca5;
 }
 
@@ -346,7 +328,7 @@ li.selected a {
     text-align: center;
 }
 
-.navbar a:hover {
+.navbar a:hover { /* Estilos para los enlaces de la barra de navegación al pasar el mouse por encima */
     color: #104A77;
 }
 
@@ -358,7 +340,7 @@ ul {
     list-style: none;
 }
 
-#acomodar {
+#acomodar { /* Acomodo de las tarjetas */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -384,7 +366,6 @@ ul {
     height: 200px;
     width: 160px;
     background-color: rgba(16, 16, 16, 0.8);
-    /* Fondo semi-transparente */
     border-radius: 10px;
     box-shadow: 16px 14px 20px #0000008c;
     overflow: hidden;
@@ -397,7 +378,7 @@ ul {
     border: 3px solid #0c6ca5;
 }
 
-.tarjeta:last-child {
+.tarjeta:last-child { /* Estilos para la última tarjeta */
     margin-bottom: 0;
 }
 
@@ -512,8 +493,8 @@ ul {
     animation: marquee 6s linear infinite;
 }
 
-/* Move it (define the animation) */
-@keyframes marquee {
+/*Mover la animacion definida como marquee*/
+@keyframes marquee { /* Keyframe es una regla que se utiliza para especificar los cambios de estilo en una animación */
     0% {
         transform: translateX(-77%);
     }
@@ -528,7 +509,6 @@ ul {
     height: 13px;
     width: 90px;
     background-color: rgba(21, 21, 21, 0.8);
-    /* Fondo semi-transparente */
     border-radius: 10px;
     box-shadow: 6px 4px 10px #0000008c;
     position: relative;
@@ -541,7 +521,7 @@ ul {
     margin-top: 0vh;
     border: 1px solid #00000000;
 }
-.planes {
+.planes { /* Estilos para los planes */
     font-size: 1vmax;
 }
 }

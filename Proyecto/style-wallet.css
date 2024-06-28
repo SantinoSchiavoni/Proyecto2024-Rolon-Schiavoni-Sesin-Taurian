@@ -23,11 +23,11 @@ body {
 	width: 100%;
 }
 
-.wrapper-grid {
-	display:grid;
-	grid-template-columns: repeat(auto-fit, 40rem); 
-
+.wrapper-grid { /* Con esto pasamos el formulario hacia abajo, cuando achicamos la pagina (responsive) */
+	display:grid; /* Esta propiedad establece el modelo de diseño en cuadrícula para el contenedor */
+	grid-template-columns: repeat(auto-fit, 40rem); /* Establece el tamaño de las columnas de la cuadrícula */
 }
+
 main {
 	padding-left: 100%;
 	padding-right: 100%;
@@ -123,10 +123,7 @@ li.selected a {
 	/* Ocultar el cuerpo de la página y la tarjeta de crédito por defecto */
 }
 
-html,
-
-
-
+html, 
 .card {
 	margin-top: 20px;
 	font-family: 'Poppins';
@@ -165,7 +162,7 @@ html,
 	left: 0;
 	width: 100%;
 	height: 100%;
-	transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out; /* Transición suave de 0.2 segundos */
 	/* Transición suave de 0.2 segundos */
 	box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0), 0 3px 3px rgba(0, 0, 0, 0.2);
 	/* Sombra del botón */
@@ -185,22 +182,22 @@ html,
 	padding: 0;
 	padding: 10px 0;
 	position: relative;
-	clear: both;
+	clear: both; /* Limpiar flotadores, para evitar solapamiento de contenidos */
 	margin-top: 7vh;
 }
 
-.form fieldset.fieldset-expiration {
+.form fieldset.fieldset-expiration { /* Establecer el ancho de los campos de entrada de la fecha de vencimiento */
 	float: left;
 	width: 60%;
 }
 
-.form fieldset.fieldset-expiration .select {
+.form fieldset.fieldset-expiration .select { /* Establecer el ancho de los campos de entrada de la fecha de vencimiento */
 	width: 70px;
 	margin-right: 12px;
 	float: left;
 }
 
-.form fieldset.fieldset-cvv {
+.form fieldset.fieldset-cvv { /* Establecer el ancho de los campos de entrada del CVV */
 	clear: none;
 	float: right;
 	width: 86px;
@@ -232,18 +229,17 @@ html,
 }
 
 /* Estos selectores CSS se aplican a dos tipos de elementos dentro de un <fieldset> que tienen clases específicas:
-
-input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen la clase input-cart-number.
-.select.input-cart-number: Se refiere a elementos de tipo "select" que tienen la clase input-cart-number.*/
+input.input-numero-tarj: Se refiere a elementos de entrada (<input>) que tienen la clase input-numero-tarj.
+.select.input-numero-tarj: Se refiere a elementos de tipo "select" que tienen la clase input-numero-tarj. */
 .form fieldset input.input-numero-tarj,
 .form fieldset .select.input-numero-tarj {
 	width: 50px;
-	display: inline-block;
+	display: inline-block; /* Alinea los elementos en línea */
 	margin-right: 8px;
 	background: transparent;
 }
 
-.form fieldset input.input-numero-tarj:last-child,
+.form fieldset input.input-numero-tarj:last-child, /* Establecer el margen derecho del último elemento de entrada */
 .form fieldset .select.input-numero-tarj:last-child {
 	margin-right: 0;
 }
@@ -253,8 +249,8 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	position: relative;
 }
 
-/* se encargan de aplicar estilos específicos a elementos de entrada y selección dentro de un formulario, asegurando su apariencia y disposición adecuadas en la página.
-*/
+/* se encargan de aplicar estilos específicos a elementos de entrada y selección dentro de un formulario, 
+asegurando su apariencia y disposición adecuadas en la página.*/
 
 /* el boton para seleccionar opciones y su ubicacion*/
 .form fieldset .select::after {
@@ -271,14 +267,17 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 
 .form fieldset .select select {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+	/* Webkit es para Safari, Chrome y Opera*/
+	/* Moz es para Firefox */
+	/* Usamos ambos, para la compatibilidad con diferentes navegadores */
+	-webkit-appearance: none; /*eliminar todos los estilos predeterminados que el navegador aplica a un elemento */
+	-moz-appearance: none;  /*eliminar todos los estilos predeterminados que el navegador aplica a un elemento */
+	appearance: none; 
 	position: absolute;
 	padding: 0;
 	border: none;
 	width: 100%;
-	outline: none !important;
+	outline: none !important; /* Evitar el resaltado del borde en el enfoque generado por los navegadores */ 
 	top: 6px;
 	left: 6px;
 	background: none;
@@ -288,7 +287,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 .form button {
 	width: 100%;
-	outline: none !important;
+	outline: none !important; /* Evitar el resaltado del borde en el enfoque generado por los navegadores */ 
 	background: linear-gradient(135deg, #230524, #0c6ca5);
 	text-transform: uppercase;
 	font-weight: bold;
@@ -296,8 +295,8 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	box-shadow: none;
 	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 	margin-top: 90px;
-	cursor: pointer;
-}
+	cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+} 
 
 .form button .fa {
 	margin-right: 6px;
@@ -313,13 +312,13 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 }
 
 
-.credit-card-box .front,
+.credit-card-box .front, 
 .credit-card-box .back {
 	width: 400px;
 	height: 250px;
 	border-radius: 15px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden; /* Ocultar la cara trasera en navegadores webkit */
+	backface-visibility: hidden; /* Ocultar la cara trasera en navegadores por defecto */
 	background-image: url('https://media.istockphoto.com/id/897189176/photo/defocused-background.webp?b=1&s=170667a&w=0&k=20&c=JqCY-fHDh0qVVQfG3N6a6jmuYegiXi-grDuR4z_ihGk=');
 	/* Imagen de fondo */
 	position: absolute;
@@ -332,7 +331,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 
 /* la transicion de dar vuelta la tarjeta, tamb puedo elegir si será rapido o lento*/
 
-
 /* Es el logo de visa negro de arriba  . Determinamos la posición*/
 .credit-card-box .logo {
 	position: absolute;
@@ -340,8 +338,6 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	right: 30px;
 	width: 60px;
 }
-
-
 
 /*Ubicación de nuestro logo personal*/
 /*mientras mas grande top: x px, estará mas abajo*/
@@ -406,7 +402,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	font-size: 10px;
 	letter-spacing: 1px;
 	text-shadow: none;
-	text-transform: uppercase;
+	text-transform: uppercase; /* Cambiar el texto a mayúsculas */
 	font-weight: normal;
 	display: block;
 	margin-bottom: 3px;
@@ -419,7 +415,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 	top: 180px;
 	left: 19px;
 	font-size: 22px;
-	text-transform: capitalize;
+	text-transform: capitalize; /* Cambia la primer letra de cada palabra en mayúscula */
 }
 
 .credit-card-box .card-expiration-date {
@@ -474,7 +470,7 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 /* Media query para pantallas pequeñas */
 @media (max-width: 599px) {
 	.container{
-		width: 120vw;
+	width: 120vw;
 	}
   .card{
 	width: 20px;
@@ -497,20 +493,20 @@ input.input-cart-number: Se refiere a elementos de entrada (<input>) que tienen 
 @media (min-width: 600px){
 .credit-card-box .flip {
 	transition: 0.8s;
-	transform-style: preserve-3d;
+	transform-style: preserve-3d; /* Preservar la transformación 3D */
 	position: relative;
 }
-.credit-card-box .front {
+.credit-card-box .front { /* Establecer la rotación de la tarjeta de crédito en 0 grados */
 	z-index: 2;
 	transform: rotateY(0deg);
 }
 }
 
-.credit-card-box .back {
+.credit-card-box .back { /* Establecer la rotación de la tarjeta de crédito en 180 grados */
 	transform: rotateY(180deg);
 }
 		
-.credit-card-box:hover .flip {
+.credit-card-box:hover .flip { 
 		  transform: rotateY(180deg);
 		}
 	  

@@ -18,8 +18,9 @@ if (addCardButton) {
 
 		console.log(num_tarj, num_tarj_1, num_tarj_2, num_tarj_3, titular_tarj, card_expiration_month, card_expiration_year, card_cvv); // Para depurar
 
-
-		localStorage.setItem('num-tarj-1', JSON.stringify(num_tarj));
+		// Almacenar los datos en localStorage
+		//JSON.stringify convierte un objeto o valor de JavaScript en una cadena de texto JSON
+		localStorage.setItem('num-tarj-1', JSON.stringify(num_tarj)); 
 		localStorage.setItem('num-tarj-2', JSON.stringify(num_tarj_1));
 		localStorage.setItem('num-tarj-3', JSON.stringify(num_tarj_2));
 		localStorage.setItem('num-tarj-4', JSON.stringify(num_tarj_3));
@@ -92,50 +93,50 @@ $('.input-numero-tarj').on('keyup change', function () {
 	 para entenderlo mejor*/
 
 
-	if (elementoActual.val().length > 3) {
-		elementoActual.next().focus();
+	if (elementoActual.val().length > 3) { // Si el valor del elemento actual es mayor a 3
+		elementoActual.next().focus(); // Enfoca el siguiente elemento
 	}
 
 	var num_tarj = '';
-	$('.input-numero-tarj').each(function () {
-		num_tarj += $(this).val() + ' ';
-		if ($(this).val().length == 16) {
-			$(this).next().focus();
+	$('.input-numero-tarj').each(function () { // Por cada elemento con la clase 'input-numero-tarj'
+		num_tarj += $(this).val() + ' '; // Concatena el valor del elemento actual con un espacio
+		if ($(this).val().length == 16) { // Si el valor del elemento actual es igual a 16
+			$(this).next().focus(); // Enfoca el siguiente elemento
 		}
 	})
-	$('.credit-card-box .number').html(num_tarj);
+	$('.credit-card-box .number').html(num_tarj); // Muestra el número de tarjeta en la caja de la tarjeta
 });
 
 
-$('#titular-tarj').on('keyup change', function () {
-	elementoActual = $(this);
-	$('.credit-card-box .titular-tarj div').html(elementoActual.val());
+$('#titular-tarj').on('keyup change', function () { // Cuando se presiona una tecla o cambia el valor del campo
+	elementoActual = $(this); // Se almacena el elemento actual
+	$('.credit-card-box .titular-tarj div').html(elementoActual.val()); // Se muestra el valor en la caja de la tarjeta
 });
 
-$('#titular-tarj').on('keyup change', function () {
+$('#titular-tarj').on('keyup change', function () { // Cuando se presiona una tecla o cambia el valor del campo
 
-	elementoActual = $(this);
-	$('.credit-card-box .titular-tarj div').html(elementoActual.val());
+	elementoActual = $(this); // Se almacena el elemento actual
+	$('.credit-card-box .titular-tarj div').html(elementoActual.val()); // Se muestra el valor en la caja de la tarjeta
 });
 
-$('#card-expiration-month, #card-expiration-year').change(function () {
-	m = $('#card-expiration-month option').index($('#card-expiration-month option:selected'));
-	m = (m < 10) ? '0' + m : m;
-	y = $('#card-expiration-year').val().substr(2, 2);
-	$('.card-expiration-date div').html(m + '/' + y);
+$('#card-expiration-month, #card-expiration-year').change(function () { // Cuando cambia el mes o el año de expiración
+	m = $('#card-expiration-month option').index($('#card-expiration-month option:selected')); // Se obtiene el índice del mes seleccionado
+	m = (m < 10) ? '0' + m : m; // Si el mes es menor a 10, se le agrega un 0 al principio
+	y = $('#card-expiration-year').val().substr(2, 2); // Se obtiene el año seleccionado
+	$('.card-expiration-date div').html(m + '/' + y); // Se muestra la fecha de expiración en la caja de la tarjeta
 })
 
-$('#card-cvv').on('focus', function () {
-	$('.credit-card-box').addClass('hover');
-}).on('blur', function () {
-	$('.credit-card-box').removeClass('hover');
-}).on('keyup change', function () {
-	$('.cvv div').html($(this).val());
+$('#card-cvv').on('focus', function () { // Cuando se enfoca en el campo CVV
+	$('.credit-card-box').addClass('hover'); // Se agrega la clase 'hover' a la caja de la tarjeta
+}).on('blur', function () { // Cuando se quita el foco del campo CVV
+	$('.credit-card-box').removeClass('hover'); // Se quita la clase 'hover' a la caja de la tarjeta
+}).on('keyup change', function () { // Cuando se presiona una tecla o cambia el valor del campo CVV
+	$('.cvv div').html($(this).val()); // Se muestra el valor en la caja de la tarjeta
 });
 
-setTimeout(function () {
-	$('#card-cvv').focus().delay(1000).queue(function () {
-		$(this).blur().dequeue();
+setTimeout(function () { // Después de 500 milisegundos
+	$('#card-cvv').focus().delay(1000).queue(function () { // Se enfoca en el campo CVV
+		$(this).blur().dequeue(); // Se quita el foco del campo CVV
 	});
-}, 500);
+}, 500); 
 
