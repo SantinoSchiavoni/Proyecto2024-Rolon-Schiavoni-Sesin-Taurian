@@ -16,7 +16,7 @@ if (addCardButton) {
 		var card_expiration_year = document.getElementById('card-expiration-year').value; // Supuesto id del año de expiración
 		var card_cvv = document.getElementById('card-cvv').value; // Supuesto id del CVV
 
-		console.log(num_tarj, num_tarj_1, num_tarj_2, num_tarj_3, titular_tarj, card_expiration_month, card_expiration_year, card_cvv); // Para depurar
+		console.log(num_tarj, num_tarj_1, num_tarj_2, num_tarj_3, titular_tarj, card_expiration_month, card_expiration_year, card_cvv); // Mostramos por consola
 
 		// Almacenar los datos en localStorage
 		//JSON.stringify convierte un objeto o valor de JavaScript en una cadena de texto JSON
@@ -139,4 +139,24 @@ setTimeout(function () { // Después de 500 milisegundos
 		$(this).blur().dequeue(); // Se quita el foco del campo CVV
 	});
 }, 500); 
+
+//Verificamos que se ingresen solo numeros en los campos que deben ir solo numeros
+document.addEventListener('DOMContentLoaded', function() { //Se espera a que el DOM se haya cargado completamente
+    var cardNumber = document.querySelectorAll('.input-numero-tarj');
+    var cvv = document.getElementById('card-cvv');//Se seleccionan los elementos de entrada y los elementos de error correspondientes
+
+    function restriccionLetras(event) {//event es un objeto del evento keydow
+        var key = event.key;//se obtiene la tecla presionada
+        if (!/^\d$/.test(key) && key !== 'Backspace' && key !== 'ArrowLeft' && key !== 'ArrowRight' && key !== 'Delete' && key !== 'Tab') {//verfica la tecla presionada
+            event.preventDefault();//Evita que se ingrese alguna de la teclas que no se deben ingresar
+        }
+    }
+
+	//Se añade un event listener a los campos de entrada para escuchar el evento input, que se dispara cada vez que se cambia el valor de un campo de entrada
+    cardNumber.forEach(function(input) {
+        input.addEventListener('keydown', restriccionLetras);//se llama a la funcion cada vez que se produce el evento
+    });
+    
+    cvv.addEventListener('keydown', restriccionLetras);
+});
 
