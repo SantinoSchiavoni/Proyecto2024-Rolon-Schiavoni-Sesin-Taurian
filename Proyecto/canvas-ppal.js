@@ -50,7 +50,7 @@ function caidaMoneda() {
                         moneda.dy = 0;
                     }
                 }, i * 500); // Retrasar la ejecución de esta función en i milisegundos
-            })(i);
+            })(i);//el i invoca a la funcion inmediatamente
         }
     }
 }

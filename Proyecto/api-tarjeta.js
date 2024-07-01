@@ -1,80 +1,89 @@
 
 document.addEventListener('DOMContentLoaded', (event) => {
-var addCardButton = document.querySelector('#btn-add');
-if (addCardButton) {
-	addCardButton.addEventListener('click', function (e) {
-		// Previene el comportamiento predeterminado del formulario
-		e.preventDefault();
+	var addCardButton = document.querySelector('#btn-add');
+	if (addCardButton) {
+		addCardButton.addEventListener('click', function (e) {
+			// Previene el comportamiento predeterminado del formulario
+			e.preventDefault();
 
-		// Almacena los datos de la tarjeta en sessionStorage
-		var num_tarj = document.getElementById('num-tarj-1').value;
-		var num_tarj_1 = document.getElementById('num-tarj-2').value;
-		var num_tarj_2 = document.getElementById('num-tarj-3').value;
-		var num_tarj_3 = document.getElementById('num-tarj-4').value;
-		var titular_tarj = document.getElementById('titular-tarj').value; // Supuesto id del titular
-		var card_expiration_month = document.getElementById('card-expiration-month').value; // Supuesto id del mes de expiración
-		var card_expiration_year = document.getElementById('card-expiration-year').value; // Supuesto id del año de expiración
-		var card_cvv = document.getElementById('card-cvv').value; // Supuesto id del CVV
+			// Almacena los datos de la tarjeta en sessionStorage
+			var num_tarj = document.getElementById('num-tarj-1').value;
+			var num_tarj_1 = document.getElementById('num-tarj-2').value;
+			var num_tarj_2 = document.getElementById('num-tarj-3').value;
+			var num_tarj_3 = document.getElementById('num-tarj-4').value;
+			var titular_tarj = document.getElementById('titular-tarj').value; // Supuesto id del titular
+			var card_expiration_month = document.getElementById('card-expiration-month').value; // Supuesto id del mes de expiración
+			var card_expiration_year = document.getElementById('card-expiration-year').value; // Supuesto id del año de expiración
+			var card_cvv = document.getElementById('card-cvv').value; // Supuesto id del CVV
 
-		console.log(num_tarj, num_tarj_1, num_tarj_2, num_tarj_3, titular_tarj, card_expiration_month, card_expiration_year, card_cvv); // Mostramos por consola
+			console.log(num_tarj, num_tarj_1, num_tarj_2, num_tarj_3, titular_tarj, card_expiration_month, card_expiration_year, card_cvv); // Mostramos por consola
 
-		// Almacenar los datos en localStorage
-		//JSON.stringify convierte un objeto o valor de JavaScript en una cadena de texto JSON
-		localStorage.setItem('num-tarj-1', JSON.stringify(num_tarj)); 
-		localStorage.setItem('num-tarj-2', JSON.stringify(num_tarj_1));
-		localStorage.setItem('num-tarj-3', JSON.stringify(num_tarj_2));
-		localStorage.setItem('num-tarj-4', JSON.stringify(num_tarj_3));
-		localStorage.setItem('titular-tarj', JSON.stringify(titular_tarj));
-		localStorage.setItem('card-expiration-month', JSON.stringify(card_expiration_month));
-		localStorage.setItem('card-expiration-year', JSON.stringify(card_expiration_year));
-		localStorage.setItem('card-cvv', JSON.stringify(card_cvv));
+			if (!num_tarj || !num_tarj_1 || !num_tarj_2 || !num_tarj_3 || !titular_tarj || !card_expiration_month || !card_expiration_year || !card_cvv) {
+				alert('Por favor, complete todos los campos.');
+			}
+			else {
+				// Almacenar los datos en localStorage
+				//JSON.stringify convierte un objeto o valor de JavaScript en una cadena de texto JSON
+				localStorage.setItem('num-tarj-1', JSON.stringify(num_tarj));
+				localStorage.setItem('num-tarj-2', JSON.stringify(num_tarj_1));
+				localStorage.setItem('num-tarj-3', JSON.stringify(num_tarj_2));
+				localStorage.setItem('num-tarj-4', JSON.stringify(num_tarj_3));
+				localStorage.setItem('titular-tarj', JSON.stringify(titular_tarj));
+				localStorage.setItem('card-expiration-month', JSON.stringify(card_expiration_month));
+				localStorage.setItem('card-expiration-year', JSON.stringify(card_expiration_year));
+				localStorage.setItem('card-cvv', JSON.stringify(card_cvv));
 
-		// Mostrar alerta de tarjeta guardada
-		alert('Tarjeta guardada con éxito');
+				if (!num_tarj || !num_tarj_1 || !num_tarj_2 || !num_tarj_3 || !titular_tarj || !card_expiration_month || !card_expiration_year || !card_cvv) {
+					alert('Por favor, complete todos los campos.');
+					return;
+				}
 
-		// Borrar los números de la pantalla
-		document.getElementById('num-tarj-1').value = '';
-		document.getElementById('num-tarj-2').value = '';
-		document.getElementById('num-tarj-3').value = '';
-		document.getElementById('num-tarj-4').value = '';
-		document.getElementById('titular-tarj').value = '';
-		document.getElementById('card-expiration-month').value = '';
-		document.getElementById('card-expiration-year').value = '';
-		document.getElementById('card-cvv').value = '';
-		$('.credit-card-box .number').html('');
-		$('.credit-card-box .titular-tarj div').html('');
-		$('.card-expiration-date div').html('');
-		$('.cvv div').html('');
+				// Mostrar alerta de tarjeta guardada
+				alert('Tarjeta guardada con éxito');
 
-	});
-} else {
-	console.error('El elemento con clase "btn-add" no se encontró en el DOM.');
-}
+				// Borrar los números de la pantalla
+				document.getElementById('num-tarj-1').value = '';
+				document.getElementById('num-tarj-2').value = '';
+				document.getElementById('num-tarj-3').value = '';
+				document.getElementById('num-tarj-4').value = '';
+				document.getElementById('titular-tarj').value = '';
+				document.getElementById('card-expiration-month').value = '';
+				document.getElementById('card-expiration-year').value = '';
+				document.getElementById('card-cvv').value = '';
+				$('.credit-card-box .number').html('');
+				$('.credit-card-box .titular-tarj div').html('');
+				$('.card-expiration-date div').html('');
+				$('.cvv div').html('');
+			}
+		});
+	} else {
+		console.error('El elemento con clase "btn-add" no se encontró en el DOM.');
+	}
 
-const formulario = document.querySelector("#formulario");
-if (formulario) {
-	formulario.addEventListener("submit", function(e) {
-		e.preventDefault();
-		console.log('Cargando tarjeta');
+	const formulario = document.querySelector("#formulario");
+	if (formulario) {
+		formulario.addEventListener("submit", function (e) {
+			e.preventDefault();
+			console.log('Cargando tarjeta');
 
-		// Obtener los valores de los campos de entrada
-		const num_tarj_1 = document.querySelector("#num-tarj-1").value;
-		const num_tarj_2 = document.querySelector("#num-tarj-2").value;
-		const num_tarj_3 = document.querySelector("#num-tarj-3").value;
-		const num_tarj_4 = document.querySelector("#num-tarj-4").value;
-		const titular_tarj = document.querySelector("#titular-tarj").value;
-		const card_expiration_month = document.querySelector("#card-expiration-month").value;
-		const card_expiration_year = document.querySelector("#card-expiration-year").value;
-		const card_cvv = document.querySelector("#card-cvv").value;
+			// Obtener los valores de los campos de entrada
+			const num_tarj_1 = document.querySelector("#num-tarj-1").value;
+			const num_tarj_2 = document.querySelector("#num-tarj-2").value;
+			const num_tarj_3 = document.querySelector("#num-tarj-3").value;
+			const num_tarj_4 = document.querySelector("#num-tarj-4").value;
+			const titular_tarj = document.querySelector("#titular-tarj").value;
+			const card_expiration_month = document.querySelector("#card-expiration-month").value;
+			const card_expiration_year = document.querySelector("#card-expiration-year").value;
+			const card_cvv = document.querySelector("#card-cvv").value;
 
-		// Imprimir los valores obtenidos en la consola
-		console.log(num_tarj_1, num_tarj_2, num_tarj_3, num_tarj_4);
-		console.log(titular_tarj, card_expiration_month, card_expiration_year, card_cvv);
-	});
-	
-} else {
-	console.error('El formulario con id "formulario" no se encontró en el DOM.');
-}
+			// Imprimir los valores obtenidos en la consola
+			console.log(num_tarj_1, num_tarj_2, num_tarj_3, num_tarj_4);
+			console.log(titular_tarj, card_expiration_month, card_expiration_year, card_cvv);
+		});
+
+	} else {
+		console.error('El formulario con id "formulario" no se encontró en el DOM.');
+	}
 
 });
 
@@ -138,25 +147,26 @@ setTimeout(function () { // Después de 500 milisegundos
 	$('#card-cvv').focus().delay(1000).queue(function () { // Se enfoca en el campo CVV
 		$(this).blur().dequeue(); // Se quita el foco del campo CVV
 	});
-}, 500); 
+}, 500);
 
 //Verificamos que se ingresen solo numeros en los campos que deben ir solo numeros
-document.addEventListener('DOMContentLoaded', function() { //Se espera a que el DOM se haya cargado completamente
-    var cardNumber = document.querySelectorAll('.input-numero-tarj');
-    var cvv = document.getElementById('card-cvv');//Se seleccionan los elementos de entrada y los elementos de error correspondientes
+document.addEventListener('DOMContentLoaded', function () { //Se espera a que el DOM se haya cargado completamente
+	var cardNumber = document.querySelectorAll('.input-numero-tarj');
+	var cvv = document.getElementById('card-cvv');//Se seleccionan los elementos de entrada y los elementos de error correspondientes
 
-    function restriccionLetras(event) {//event es un objeto del evento keydow
-        var key = event.key;//se obtiene la tecla presionada
-        if (!/^\d$/.test(key) && key !== 'Backspace' && key !== 'ArrowLeft' && key !== 'ArrowRight' && key !== 'Delete' && key !== 'Tab') {//verfica la tecla presionada
-            event.preventDefault();//Evita que se ingrese alguna de la teclas que no se deben ingresar
-        }
-    }
+	function restriccionLetras(event) {//event es un objeto del evento keydow
+		var key = event.key;//se obtiene la tecla presionada
+		//verfica la tecla presionada
+		if (!/^\d$/.test(key) && key !== 'Backspace' && key !== 'ArrowLeft' && key !== 'ArrowRight' && key !== 'Delete' && key !== 'Tab') {
+			event.preventDefault();//Evita que se ingrese alguna de la teclas que no se deben ingresar
+		}
+	}
 
 	//Se añade un event listener a los campos de entrada para escuchar el evento input, que se dispara cada vez que se cambia el valor de un campo de entrada
-    cardNumber.forEach(function(input) {
-        input.addEventListener('keydown', restriccionLetras);//se llama a la funcion cada vez que se produce el evento
-    });
-    
-    cvv.addEventListener('keydown', restriccionLetras);
+	cardNumber.forEach(function (input) {
+		input.addEventListener('keydown', restriccionLetras);//se llama a la funcion cada vez que se produce el evento
+	});
+
+	cvv.addEventListener('keydown', restriccionLetras);
 });
 
