@@ -1,3 +1,17 @@
+/**
+ * Descripción
+ * @method api-tarjeta
+ * @param {button} addCardButton - Botón para agregar tarjeta
+ * @param {number} numTarj1 - Numeros de la tarjeta del 1 al 4
+ * @param {number} numTarj2 - Numeros de la tarjeta del 5 al 8
+ * @param {number} numTarj3 - Numeros de la tarjeta del 9 al 12
+ * @param {number} numTarj4 - Numeros de la tarjeta del 13 al 16
+ * @param {string} titularTarj - Titular de la tarjeta
+ * @param {number} cardExpirationMonth - Mes de expiración de la tarjeta
+ * @param {number} cardExpirationYear - Año de expiración de la tarjeta
+ * @param {number} cardCvv - CVV de la tarjeta
+ * @return {alert} alert - Alerta de tarjeta guardada con éxito
+ */
 
 document.addEventListener('DOMContentLoaded', (event) => {
 	var addCardButton = document.querySelector('#btn-add');

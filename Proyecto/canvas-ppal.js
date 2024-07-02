@@ -1,9 +1,11 @@
 /**
  * Descripción
- * @method Nombre de la función
- * @param Parámetro A
- * @param Parámetro B
- * @return Valor que retorna
+ * @method canvas-ppal 
+ * @param {number} numMonedas - Número de monedas que quieres que caigan
+ * @return {number} x - Posición x (separadas por 150px)
+ * @return {number} dx - Velocidad (todas las monedas caen a la misma velocidad)
+ * @return {number} y - Posición y (comienzan en la parte superior del canvas)
+ * @return {number} dy - Velocidad (todas las monedas caen a la misma velocidad)
  */
 
 //Aca se genera la animacion de la lluvia de monedas

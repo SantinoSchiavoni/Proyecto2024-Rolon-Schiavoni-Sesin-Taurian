@@ -1,3 +1,17 @@
+/**
+ * Descripción
+ * @method api-dolar
+ * @param {string} url - URL de la API
+ * @param {object} mostrarcotizacion - Contenedor de la cotización
+ * @param {object} oficial - Cotización oficial
+ * @param {object} blue - Cotización blue
+ * @param {object} bolsa - Cotización bolsa
+ * @param {object} contadoConLiqui - Cotización contado con liqui
+ * @param {object} mayorista - Cotización mayorista
+ * @param {object} tarjeta - Cotización tarjeta
+ * @return {object} box - Caja para almacenar la cotización
+ */
+
 let url = 'https://dolarapi.com/v1/dolares'; /*Obtencion de api*/
 let mostrarcotizacion = document.getElementById('dolar');
 
